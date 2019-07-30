@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 7fa6c1bdf9ae59445a67e16e4a17d2e1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ball
+    100002: //RootNode
+    100004: fox
+    100006: fox 1
+    100008: scarf
+    100010: scarf 1
+    100012: scarf1
+    100014: transform420
+    100016: transform421
+    100018: transform457
+    100020: transform458
+    100022: fox1
+    100024: polySurface35
+    100026: polySurface36
+    100028: polySurface37
+    100030: polySurface37 1
+    100032: polySurface38
+    100034: polySurface39
+    100036: polySurface40
+    100038: polySurface41
+    100040: polySurface42
+    100042: polySurface43
+    100044: polySurface44
+    100046: polySurface44 1
+    100048: polySurface45
+    100050: transform64
+    100052: transform65
+    100054: transform66
+    100056: transform67
+    100058: transform68
+    100060: transform69
+    100062: transform70
+    100064: transform71
+    100066: transform72
+    100068: transform73
+    100070: transform74
+    100072: transform75
+    100074: transform76
+    400000: ball
+    400002: //RootNode
+    400004: fox
+    400006: fox 1
+    400008: scarf
+    400010: scarf 1
+    400012: scarf1
+    400014: transform420
+    400016: transform421
+    400018: transform457
+    400020: transform458
+    400022: fox1
+    400024: polySurface35
+    400026: polySurface36
+    400028: polySurface37
+    400030: polySurface37 1
+    400032: polySurface38
+    400034: polySurface39
+    400036: polySurface40
+    400038: polySurface41
+    400040: polySurface42
+    400042: polySurface43
+    400044: polySurface44
+    400046: polySurface44 1
+    400048: polySurface45
+    400050: transform64
+    400052: transform65
+    400054: transform66
+    400056: transform67
+    400058: transform68
+    400060: transform69
+    400062: transform70
+    400064: transform71
+    400066: transform72
+    400068: transform73
+    400070: transform74
+    400072: transform75
+    400074: transform76
+    2100000: lambert19
+    2100002: lambert6
+    2300000: scarf1
+    2300002: //RootNode
+    2300004: polySurface45
+    3300000: scarf1
+    3300002: //RootNode
+    3300004: polySurface45
+    4300000: scarf1
+    4300002: fox1
+    4300004: polySurface45
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

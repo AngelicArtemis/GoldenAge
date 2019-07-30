@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: d5e5b8e045352fd4d8ea10b3853494e3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: brench
+    100002: brench 1
+    100004: brench1
+    100006: brench1 1
+    100008: sakura
+    100010: sakura 1
+    100012: sakura1
+    100014: sakura2
+    100016: sakura3
+    100018: sakura4
+    100020: sakura5
+    100022: sakura6
+    100024: transform1
+    100026: transform2
+    100028: transform422
+    100030: transform423
+    100032: transform424
+    100034: transform425
+    100036: transform426
+    100038: transform427
+    100040: transform428
+    100042: transform429
+    100044: transform430
+    100046: transform431
+    100048: transform432
+    100050: transform433
+    100052: transform434
+    100054: transform435
+    100056: transform436
+    100058: transform437
+    100060: tree
+    100062: tree 1
+    100064: tree1
+    100066: tree1 1
+    100068: tree1_sakura
+    100070: tree1_sakura1
+    100072: tree1_sakura1 1
+    100074: tree1_sakura2
+    100076: tree1_sakura3
+    100078: tree1_sakura4
+    100080: tree1_sakura5
+    100082: tree1_sakura6
+    100084: tree1_sakura7
+    100086: tree1_sakura8
+    100088: tree3
+    100090: //RootNode
+    100092: tree2
+    100094: tree4
+    100096: tree5
+    100098: tree6
+    400000: brench
+    400002: brench 1
+    400004: brench1
+    400006: brench1 1
+    400008: sakura
+    400010: sakura 1
+    400012: sakura1
+    400014: sakura2
+    400016: sakura3
+    400018: sakura4
+    400020: sakura5
+    400022: sakura6
+    400024: transform1
+    400026: transform2
+    400028: transform422
+    400030: transform423
+    400032: transform424
+    400034: transform425
+    400036: transform426
+    400038: transform427
+    400040: transform428
+    400042: transform429
+    400044: transform430
+    400046: transform431
+    400048: transform432
+    400050: transform433
+    400052: transform434
+    400054: transform435
+    400056: transform436
+    400058: transform437
+    400060: tree
+    400062: tree 1
+    400064: tree1
+    400066: tree1 1
+    400068: tree1_sakura
+    400070: tree1_sakura1
+    400072: tree1_sakura1 1
+    400074: tree1_sakura2
+    400076: tree1_sakura3
+    400078: tree1_sakura4
+    400080: tree1_sakura5
+    400082: tree1_sakura6
+    400084: tree1_sakura7
+    400086: tree1_sakura8
+    400088: tree3
+    400090: //RootNode
+    400092: tree2
+    400094: tree4
+    400096: tree5
+    400098: tree6
+    2100000: lambert20
+    2100002: lambert21
+    2100004: lambert22
+    2300000: sakura4
+    2300002: sakura5
+    2300004: sakura6
+    2300006: tree1_sakura6
+    2300008: tree1_sakura7
+    2300010: tree1_sakura8
+    2300012: tree1
+    2300014: tree2
+    2300016: tree3
+    2300018: tree4
+    2300020: tree5
+    2300022: tree6
+    3300000: sakura4
+    3300002: sakura5
+    3300004: sakura6
+    3300006: tree1_sakura6
+    3300008: tree1_sakura7
+    3300010: tree1_sakura8
+    3300012: tree1
+    3300014: tree2
+    3300016: tree3
+    3300018: tree4
+    3300020: tree5
+    3300022: tree6
+    4300000: sakura4
+    4300002: tree1_sakura6
+    4300004: sakura5
+    4300006: tree1_sakura7
+    4300008: sakura6
+    4300010: tree1_sakura8
+    4300012: tree1
+    4300014: tree2
+    4300016: tree3
+    4300018: tree4
+    4300020: tree5
+    4300022: tree6
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

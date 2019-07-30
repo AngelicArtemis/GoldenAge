@@ -1,0 +1,413 @@
+fileFormatVersion: 2
+guid: 38f366a60278ea5419824a585beb6499
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: backRoof
+    100002: //RootNode
+    100004: glassDoor
+    100006: museum
+    100008: museum_pillar1
+    100010: museum_pillar10
+    100012: museum_pillar11
+    100014: museum_pillar12
+    100016: museum_pillar13
+    100018: museum_pillar14
+    100020: museum_pillar15
+    100022: museum_pillar16
+    100024: museum_pillar17
+    100026: museum_pillar18
+    100028: museum_pillar19
+    100030: museum_pillar2
+    100032: museum_pillar20
+    100034: museum_pillar21
+    100036: museum_pillar3
+    100038: museum_pillar4
+    100040: museum_pillar5
+    100042: museum_pillar5 1
+    100044: museum_pillar6
+    100046: museum_pillar7
+    100048: museum_pillar8
+    100050: museum_pillar9
+    100052: museum_pillarSide
+    100054: museum_pillarSide 1
+    100056: museum_pillarSide1
+    100058: museum_pillarSide1 1
+    100060: museum_pillarSide10
+    100062: museum_pillarSide10 1
+    100064: museum_pillarSide11
+    100066: museum_pillarSide11 1
+    100068: museum_pillarSide12
+    100070: museum_pillarSide12 1
+    100072: museum_pillarSide13
+    100074: museum_pillarSide2
+    100076: museum_pillarSide2 1
+    100078: museum_pillarSide3
+    100080: museum_pillarSide3 1
+    100082: museum_pillarSide4
+    100084: museum_pillarSide4 1
+    100086: museum_pillarSide5
+    100088: museum_pillarSide5 1
+    100090: museum_pillarSide6
+    100092: museum_pillarSide6 1
+    100094: museum_pillarSide7
+    100096: museum_pillarSide7 1
+    100098: museum_pillarSide8
+    100100: museum_pillarSide8 1
+    100102: museum_pillarSide9
+    100104: museum_pillarSide9 1
+    100106: museum_Rm
+    100108: museum_Rm 1
+    100110: museum_roof
+    100112: museum_room
+    100114: museum_sideHouse
+    100116: museum_sideHouse1
+    100118: museum_sideHouse_museum_sideRm
+    100120: museum_sideHouse_roof_cly4
+    100122: museum_sideHouse_sideRoof3
+    100124: museum_sideHouse_sideRoof4
+    100126: museum_sideRm
+    100128: museum_sideRm 1
+    100130: roof_cly
+    100132: roof_cly1
+    100134: roof_cly2
+    100136: roof_cly2 1
+    100138: roof_cly3
+    100140: roof_cly3 1
+    100142: roof_cly4
+    100144: roof_cly4 1
+    100146: sideRoof1
+    100148: sideRoof1 1
+    100150: sideRoof2
+    100152: sideRoof2 1
+    100154: sideRoof3
+    100156: sideRoof3 1
+    100158: transform459
+    100160: transform460
+    100162: transform461
+    100164: transform462
+    100166: transform463
+    100168: transform464
+    100170: transform465
+    100172: transform466
+    100174: transform467
+    100176: transform468
+    100178: transform469
+    100180: transform470
+    100182: transform471
+    100184: transform472
+    100186: transform473
+    100188: transform474
+    100190: transform475
+    100192: transform476
+    100194: transform477
+    100196: transform478
+    100198: transform479
+    100200: transform480
+    100202: transform481
+    100204: transform482
+    100206: transform483
+    100208: transform484
+    100210: transform485
+    100212: transform486
+    100214: transform487
+    100216: transform488
+    100218: transform489
+    100220: transform490
+    100222: transform491
+    100224: transform492
+    100226: transform493
+    100228: transform494
+    100230: transform495
+    100232: transform496
+    100234: transform497
+    100236: transform498
+    100238: transform499
+    100240: transform500
+    100242: transform501
+    100244: transform502
+    100246: transform503
+    100248: transform504
+    100250: transform505
+    100252: transform506
+    100254: transform507
+    100256: transform508
+    100258: transform509
+    100260: transform510
+    100262: transform511
+    100264: transform512
+    100266: transform513
+    100268: transform514
+    100270: transform515
+    100272: transform516
+    100274: transform517
+    100276: transform518
+    100278: transform519
+    100280: transform520
+    100282: transform521
+    100284: transform522
+    100286: transform523
+    100288: transform524
+    100290: transform525
+    100292: transform526
+    100294: transform527
+    100296: transform528
+    100298: transform545
+    100300: transform546
+    100302: transform547
+    100304: transform548
+    100306: transform549
+    100308: transform550
+    100310: wall
+    100312: wall 1
+    400000: backRoof
+    400002: //RootNode
+    400004: glassDoor
+    400006: museum
+    400008: museum_pillar1
+    400010: museum_pillar10
+    400012: museum_pillar11
+    400014: museum_pillar12
+    400016: museum_pillar13
+    400018: museum_pillar14
+    400020: museum_pillar15
+    400022: museum_pillar16
+    400024: museum_pillar17
+    400026: museum_pillar18
+    400028: museum_pillar19
+    400030: museum_pillar2
+    400032: museum_pillar20
+    400034: museum_pillar21
+    400036: museum_pillar3
+    400038: museum_pillar4
+    400040: museum_pillar5
+    400042: museum_pillar5 1
+    400044: museum_pillar6
+    400046: museum_pillar7
+    400048: museum_pillar8
+    400050: museum_pillar9
+    400052: museum_pillarSide
+    400054: museum_pillarSide 1
+    400056: museum_pillarSide1
+    400058: museum_pillarSide1 1
+    400060: museum_pillarSide10
+    400062: museum_pillarSide10 1
+    400064: museum_pillarSide11
+    400066: museum_pillarSide11 1
+    400068: museum_pillarSide12
+    400070: museum_pillarSide12 1
+    400072: museum_pillarSide13
+    400074: museum_pillarSide2
+    400076: museum_pillarSide2 1
+    400078: museum_pillarSide3
+    400080: museum_pillarSide3 1
+    400082: museum_pillarSide4
+    400084: museum_pillarSide4 1
+    400086: museum_pillarSide5
+    400088: museum_pillarSide5 1
+    400090: museum_pillarSide6
+    400092: museum_pillarSide6 1
+    400094: museum_pillarSide7
+    400096: museum_pillarSide7 1
+    400098: museum_pillarSide8
+    400100: museum_pillarSide8 1
+    400102: museum_pillarSide9
+    400104: museum_pillarSide9 1
+    400106: museum_Rm
+    400108: museum_Rm 1
+    400110: museum_roof
+    400112: museum_room
+    400114: museum_sideHouse
+    400116: museum_sideHouse1
+    400118: museum_sideHouse_museum_sideRm
+    400120: museum_sideHouse_roof_cly4
+    400122: museum_sideHouse_sideRoof3
+    400124: museum_sideHouse_sideRoof4
+    400126: museum_sideRm
+    400128: museum_sideRm 1
+    400130: roof_cly
+    400132: roof_cly1
+    400134: roof_cly2
+    400136: roof_cly2 1
+    400138: roof_cly3
+    400140: roof_cly3 1
+    400142: roof_cly4
+    400144: roof_cly4 1
+    400146: sideRoof1
+    400148: sideRoof1 1
+    400150: sideRoof2
+    400152: sideRoof2 1
+    400154: sideRoof3
+    400156: sideRoof3 1
+    400158: transform459
+    400160: transform460
+    400162: transform461
+    400164: transform462
+    400166: transform463
+    400168: transform464
+    400170: transform465
+    400172: transform466
+    400174: transform467
+    400176: transform468
+    400178: transform469
+    400180: transform470
+    400182: transform471
+    400184: transform472
+    400186: transform473
+    400188: transform474
+    400190: transform475
+    400192: transform476
+    400194: transform477
+    400196: transform478
+    400198: transform479
+    400200: transform480
+    400202: transform481
+    400204: transform482
+    400206: transform483
+    400208: transform484
+    400210: transform485
+    400212: transform486
+    400214: transform487
+    400216: transform488
+    400218: transform489
+    400220: transform490
+    400222: transform491
+    400224: transform492
+    400226: transform493
+    400228: transform494
+    400230: transform495
+    400232: transform496
+    400234: transform497
+    400236: transform498
+    400238: transform499
+    400240: transform500
+    400242: transform501
+    400244: transform502
+    400246: transform503
+    400248: transform504
+    400250: transform505
+    400252: transform506
+    400254: transform507
+    400256: transform508
+    400258: transform509
+    400260: transform510
+    400262: transform511
+    400264: transform512
+    400266: transform513
+    400268: transform514
+    400270: transform515
+    400272: transform516
+    400274: transform517
+    400276: transform518
+    400278: transform519
+    400280: transform520
+    400282: transform521
+    400284: transform522
+    400286: transform523
+    400288: transform524
+    400290: transform525
+    400292: transform526
+    400294: transform527
+    400296: transform528
+    400298: transform545
+    400300: transform546
+    400302: transform547
+    400304: transform548
+    400306: transform549
+    400308: transform550
+    400310: wall
+    400312: wall 1
+    2100000: lambert25
+    2300000: museum_sideHouse_sideRoof4
+    2300002: //RootNode
+    3300000: museum_sideHouse_sideRoof4
+    3300002: //RootNode
+    4300000: museum_sideHouse_sideRoof4
+    4300002: museum
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

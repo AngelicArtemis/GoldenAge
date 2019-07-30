@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 65e2f8eb28ca526458e667ad7e64e106
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: pCube3
+    100002: pCube4
+    100004: pillar1
+    100006: pillar2
+    100008: pillarFront
+    100010: pillarFront1
+    100012: pillarFront2
+    100014: pillarFront3
+    100016: pillarFrontCube
+    100018: pillarFrontCube2
+    100020: pillarFrontCube3
+    100022: pillarFrontCube4
+    100024: pillarFrontTop
+    100026: pillarFrontTop1
+    100028: pillarFrontTop2
+    100030: pillarFrontTop3
+    100032: //RootNode
+    100034: Torii
+    100036: toriiCube1
+    100038: toriiCube2
+    100040: toriiTop1
+    100042: toriiTop2
+    100044: toriiTop2 1
+    100046: toriiTop3
+    100048: toriiTop4
+    100050: transform10
+    100052: transform11
+    100054: transform12
+    100056: transform13
+    100058: transform14
+    100060: transform15
+    100062: transform16
+    100064: transform17
+    100066: transform18
+    100068: transform19
+    100070: transform20
+    100072: transform21
+    100074: transform22
+    100076: transform23
+    100078: transform24
+    100080: transform25
+    100082: transform26
+    100084: transform27
+    100086: transform28
+    100088: transform7
+    100090: transform8
+    100092: transform9
+    400000: pCube3
+    400002: pCube4
+    400004: pillar1
+    400006: pillar2
+    400008: pillarFront
+    400010: pillarFront1
+    400012: pillarFront2
+    400014: pillarFront3
+    400016: pillarFrontCube
+    400018: pillarFrontCube2
+    400020: pillarFrontCube3
+    400022: pillarFrontCube4
+    400024: pillarFrontTop
+    400026: pillarFrontTop1
+    400028: pillarFrontTop2
+    400030: pillarFrontTop3
+    400032: //RootNode
+    400034: Torii
+    400036: toriiCube1
+    400038: toriiCube2
+    400040: toriiTop1
+    400042: toriiTop2
+    400044: toriiTop2 1
+    400046: toriiTop3
+    400048: toriiTop4
+    400050: transform10
+    400052: transform11
+    400054: transform12
+    400056: transform13
+    400058: transform14
+    400060: transform15
+    400062: transform16
+    400064: transform17
+    400066: transform18
+    400068: transform19
+    400070: transform20
+    400072: transform21
+    400074: transform22
+    400076: transform23
+    400078: transform24
+    400080: transform25
+    400082: transform26
+    400084: transform27
+    400086: transform28
+    400088: transform7
+    400090: transform8
+    400092: transform9
+    2100000: lambert11
+    2300000: toriiTop2
+    2300002: //RootNode
+    3300000: toriiTop2
+    3300002: //RootNode
+    4300000: toriiTop2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 7fe59532e508ffd42b5e365426728870
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bottom
+    100002: door
+    100004: house
+    100006: //RootNode
+    100008: house 1
+    100010: house1
+    100012: house1 1
+    100014: house2
+    100016: roof
+    100018: roof1
+    100020: roof2
+    100022: roof_small
+    100024: roof_small1
+    100026: roof_support
+    100028: roof_support1
+    100030: roof_support2
+    100032: side
+    100034: transform529
+    100036: transform530
+    100038: transform531
+    100040: transform532
+    100042: transform533
+    100044: transform534
+    100046: transform535
+    100048: transform536
+    100050: transform537
+    100052: transform538
+    100054: transform539
+    100056: transform540
+    100058: transform541
+    100060: transform542
+    100062: transform543
+    100064: transform544
+    100066: window
+    100068: window1
+    100070: window2
+    100072: window3
+    100074: house3
+    100076: house4
+    400000: bottom
+    400002: door
+    400004: //RootNode
+    400006: house
+    400008: house 1
+    400010: house1
+    400012: house1 1
+    400014: house2
+    400016: roof
+    400018: roof1
+    400020: roof2
+    400022: roof_small
+    400024: roof_small1
+    400026: roof_support
+    400028: roof_support1
+    400030: roof_support2
+    400032: side
+    400034: transform529
+    400036: transform530
+    400038: transform531
+    400040: transform532
+    400042: transform533
+    400044: transform534
+    400046: transform535
+    400048: transform536
+    400050: transform537
+    400052: transform538
+    400054: transform539
+    400056: transform540
+    400058: transform541
+    400060: transform542
+    400062: transform543
+    400064: transform544
+    400066: window
+    400068: window1
+    400070: window2
+    400072: window3
+    400074: house3
+    400076: house4
+    2100000: lambert26
+    2100002: lambert27
+    2300000: house1
+    2300002: house2
+    2300004: house3
+    2300006: house4
+    3300000: house1
+    3300002: house2
+    3300004: house3
+    3300006: house4
+    4300000: house1
+    4300002: house2
+    4300004: house3
+    4300006: house4
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
