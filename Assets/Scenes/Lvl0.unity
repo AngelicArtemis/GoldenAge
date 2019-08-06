@@ -118,7 +118,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-28126
+  m_Name: pb_Mesh17928
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -10619,6 +10619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468e61a9909f7c64aac2b7b1944830b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  portal1: {fileID: 2026184687}
+  button1: {fileID: 0}
 --- !u!1 &2058735862
 GameObject:
   m_ObjectHideFlags: 0
