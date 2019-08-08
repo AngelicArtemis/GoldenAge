@@ -10,6 +10,7 @@ public class SceneChanger : MonoBehaviour
     public delegate void ButtonHit();
     public static event ButtonHit OnButtonHit;
     public GameObject button1;
+    bool gamestart = false;
 
     void Update()
     {
@@ -17,23 +18,26 @@ public class SceneChanger : MonoBehaviour
         sceneName = currentScene.name;
     }
 
+    public void dialogues()
+    {
+
+    }
+
     public void lvl0()
     {
         button1.SetActive(false);
         SceneManager.LoadScene("Lvl0", LoadSceneMode.Additive);
+        gamestart = true;
     }
 
     public void lvl1()
     {
-        //SceneManager.LoadScene("Lvl1",);
         SceneManager.LoadSceneAsync("Lvl1", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("Lvl0");
 
     }
     public void lvl2()
     {
-        //SceneManager.LoadScene("Lvl2", LoadSceneMode.Additive);
-        //SceneManager.UnloadScene("Lvl1");
         SceneManager.LoadSceneAsync("Lvl2", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("Lvl1");
 
@@ -43,7 +47,7 @@ public class SceneChanger : MonoBehaviour
         if (other.gameObject.name == "playerTouch")
         {
             if(sceneName == "Lvl1")//&& photoCollider.photoCollected == 3) rather than putting it here, make it so
-                //that the portal only appear AFTER you finish collecting the three pics ya know?
+                //that the portal only appear AFTER you finish collecting the three pics
             {
                 lvl2();
             }
