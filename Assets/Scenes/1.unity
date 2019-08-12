@@ -14839,6 +14839,7 @@ GameObject:
   - component: {fileID: 1079048615}
   - component: {fileID: 1079048614}
   - component: {fileID: 1079048616}
+  - component: {fileID: 1079048617}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -14910,6 +14911,25 @@ MonoBehaviour:
     your first stop.
   text8: Have a safe trip!
   mustClick: 1
+--- !u!114 &1079048617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079048612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f669e27dc7348e49f8574f108f3b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pLook: {fileID: 1355767228}
+  robot: {fileID: 1079048614}
+  RobotDialogue: {fileID: 1858209740}
+  RobotText: {fileID: 954275821}
+  PageNum: 0
+  text1: hewwwwoooo
+  firstPersonController: {fileID: 468462816}
 --- !u!1 &1109221459
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,21 +6,16 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
     string sceneName;
-
-    public delegate void ButtonHit();
-    public static event ButtonHit OnButtonHit;
     public GameObject button1;
     bool gamestart = false;
 
     void Update()
     {
-        Scene currentScene = SceneManager.GetSceneAt(1);
-        sceneName = currentScene.name;
-    }
-
-    public void dialogues()
-    {
-
+        if(gamestart)
+        {
+            Scene currentScene = SceneManager.GetSceneAt(1);
+            sceneName = currentScene.name;
+        }
     }
 
     public void lvl0()
