@@ -9,6 +9,7 @@ public class Dialogue : MonoBehaviour
     public PlayerLook pLook;
     public Robot robot;
     bool talking = false;
+    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class Dialogue : MonoBehaviour
             {
                 dialogBox.gameObject.SetActive(false);
                 talking = false;
+                firstPersonController.enabled = true;
             }
             else if(!talking)
             {
@@ -30,6 +32,7 @@ public class Dialogue : MonoBehaviour
                 dialogBox.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text = randomMessage;
                 dialogBox.gameObject.SetActive(true);
                 talking = true;
+                firstPersonController.enabled = false;
             }
             
         }

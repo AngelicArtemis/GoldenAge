@@ -7,7 +7,7 @@ public class SceneChanger : MonoBehaviour
 {
     string sceneName;
     public GameObject button1;
-    bool gamestart = false;
+    public bool gamestart = false;
 
     void Update()
     {
@@ -23,6 +23,9 @@ public class SceneChanger : MonoBehaviour
         button1.SetActive(false);
         SceneManager.LoadScene("Lvl0", LoadSceneMode.Additive);
         gamestart = true;
+        GameObject canvas = GameObject.Find("PersistentCanvas");
+        ButtonManager buttonManager = canvas.GetComponent<ButtonManager>();
+        buttonManager.inGame = true;
     }
 
     public void lvl1()
