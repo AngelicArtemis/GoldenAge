@@ -2827,6 +2827,7 @@ GameObject:
   - component: {fileID: 1658178590}
   - component: {fileID: 1658178591}
   - component: {fileID: 1658178592}
+  - component: {fileID: 1658178593}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -2898,6 +2899,34 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &1658178593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658178589}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687fa1f3b53876a4382872cc6e3ce313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 98699673}
+  inGameMenu: {fileID: 1888557436}
+  inGame: 0
+  keyDelay: 0.2
+  credit: {fileID: 378354332}
+  sizeofThis: 8
+  sizeThis:
+  - {fileID: 255937035}
+  - {fileID: 1931161428}
+  - {fileID: 1489821111}
+  - {fileID: 515539336}
+  - {fileID: 1342133852}
+  - {fileID: 831791202}
+  - {fileID: 1339581141}
+  - {fileID: 18864271}
+  testingscale: {fileID: 230071008}
 --- !u!1 &1708912388
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,13 +3352,14 @@ GameObject:
   - component: {fileID: 1888557437}
   - component: {fileID: 1888557439}
   - component: {fileID: 1888557438}
+  - component: {fileID: 1888557440}
   m_Layer: 5
   m_Name: InGameMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1888557437
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3390,6 +3420,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888557436}
   m_CullTransparentMesh: 0
+--- !u!114 &1888557440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888557436}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687fa1f3b53876a4382872cc6e3ce313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 98699673}
+  inGameMenu: {fileID: 1888557436}
+  inGame: 0
+  keyDelay: 0.2
+  credit: {fileID: 378354332}
+  sizeofThis: 8
+  sizeThis:
+  - {fileID: 255937035}
+  - {fileID: 1931161428}
+  - {fileID: 1489821111}
+  - {fileID: 515539336}
+  - {fileID: 1342133852}
+  - {fileID: 831791202}
+  - {fileID: 1339581141}
+  - {fileID: 18864271}
+  testingscale: {fileID: 230071008}
 --- !u!1 &1889682728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,6 +3608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1931161429}
   - component: {fileID: 1931161431}
+  - component: {fileID: 1931161432}
   - component: {fileID: 1931161430}
   m_Layer: 5
   m_Name: Image
@@ -3614,3 +3673,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931161428}
   m_CullTransparentMesh: 0
+--- !u!114 &1931161432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931161428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ff3a86fa5cf8645aad6a19587ded85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonStuff: {fileID: 0}

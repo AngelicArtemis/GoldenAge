@@ -75,6 +75,7 @@ public class ButtonManager : MonoBehaviour
     public void startGame()
     {
         StartCoroutine(disableCursor());
+        mainMenu.SetActive(false);
     }
     
 

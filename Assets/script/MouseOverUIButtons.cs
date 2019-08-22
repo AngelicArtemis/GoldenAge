@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MouseOverUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class MouseOverUIButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject buttonStuff;
     public void OnPointerEnter(PointerEventData eventData)
