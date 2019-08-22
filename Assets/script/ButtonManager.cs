@@ -13,10 +13,12 @@ public class ButtonManager : MonoBehaviour
     public bool inGame = false;
     public float keyDelay;
     private float timePassed = 0f;
-    public GameObject credit;
+    public GameObject credit; //creditpage
+    public GameObject tutorialPage; //tutorialpage
     public int sizeofThis;
     public GameObject[] sizeThis;
     public GameObject testingscale;
+    public GameObject inGameIcon;
 
     private void Start()
     {
@@ -75,6 +77,7 @@ public class ButtonManager : MonoBehaviour
     public void startGame()
     {
         StartCoroutine(disableCursor());
+        inGameIcon.SetActive(true);
         mainMenu.SetActive(false);
     }
     
@@ -112,6 +115,7 @@ public class ButtonManager : MonoBehaviour
         
         mainMenu.SetActive(true);
         inGameMenu.SetActive(false);
+        inGameIcon.SetActive(false);
     }
 
     public void exitGame()
@@ -139,6 +143,12 @@ public class ButtonManager : MonoBehaviour
     public void instructionPage()
     {
         //opens instruction page
+        tutorialPage.SetActive(true);
+    }
+    public void closeInstruction()
+    {
+        //close tutorialUI
+        tutorialPage.SetActive(false);
     }
 
     public void map()
