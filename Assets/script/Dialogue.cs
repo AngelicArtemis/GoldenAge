@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Dialogue : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class Dialogue : MonoBehaviour
 
     private void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         if (robot.playerClose && Input.GetMouseButtonDown(0))
         {
             if(talking)

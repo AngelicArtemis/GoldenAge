@@ -45,18 +45,20 @@ public class ButtonManager : MonoBehaviour
 
         timePassed += Time.deltaTime;
         //print(timePassed);
-        if (Input.GetKey("h") && inGame && timePassed >= keyDelay) 
+        if (Input.GetKey("escape") && inGame && timePassed >= keyDelay) 
         {
             if (!inMenu)
             {
                 StartCoroutine(enableCursor());
                 inGameMenu.SetActive(true);
+                inGameIcon.SetActive(false);
                 inMenu = true;
             }
             else if (inMenu)
             {
                 StartCoroutine(disableCursor());
                 inGameMenu.SetActive(false);
+                inGameIcon.SetActive(true);
                 inMenu = false;
             }
             timePassed = 0f;
