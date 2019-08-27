@@ -14870,6 +14870,10 @@ PrefabInstance:
       propertyPath: m_MouseLook.lockCursor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2106761353}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14969,6 +14973,12 @@ MonoBehaviour:
   PageNum: 0
   text1: bye
   firstPersonController: {fileID: 2106761350}
+--- !u!20 &2106761353 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2106761347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2127026724
 GameObject:
   m_ObjectHideFlags: 0
