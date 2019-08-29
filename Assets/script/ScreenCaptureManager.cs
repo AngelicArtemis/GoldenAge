@@ -83,4 +83,21 @@ public class ScreenCaptureManager : MonoBehaviour
         //Once we know we return that amount
         return count;
     }
+
+    //make a function to activate count number of boxes of ui 
+    //we coult instantaniate? set alignment? 
+    //or just have a single picture on the screen and have arrows to go back and next if there's such thing
+    //and then load the the images into the boxes of ui
+
+
+    //make a function that loops and call for this function 
+    public static Texture2D LoadImage(string filename)
+    {
+        byte[] bytes = File.ReadAllBytes(filename);
+
+        Texture2D texture = new Texture2D(Screen.width,Screen.height);
+        texture.LoadImage(bytes);
+
+        return texture;
+    }
 }
