@@ -83,15 +83,4 @@ public class ScreenCaptureManager : MonoBehaviour
         //Once we know we return that amount
         return count;
     }
-
-    public static Texture2D LoadImage(string filename)
-    {
-        byte[] bytes = File.ReadAllBytes(filename);
-
-        Texture2D texture = new Texture2D(1600,900);
-        texture.LoadImage(bytes);
-
-        return texture;
-    }
-    
 }
