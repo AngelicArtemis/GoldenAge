@@ -1213,6 +1213,8 @@ ModelImporter:
     102414: transform97
     102416: transform98
     102418: transform99
+    102420: polySurface1915
+    102422: polySurface2024
     400000: //RootNode
     400002: pCone1
     400004: pCone10
@@ -2423,6 +2425,8 @@ ModelImporter:
     402414: transform97
     402416: transform98
     402418: transform99
+    402420: polySurface1915
+    402422: polySurface2024
     2100000: blinn2
     2100002: lambert10
     2100004: lambert11
@@ -2437,6 +2441,15 @@ ModelImporter:
     2100022: lambert12
     2100024: lambert17
     2100026: blinn3
+    2100028: house_4
+    2100030: colors
+    2100032: house_3
+    2100034: lantern
+    2100036: poster
+    2100038: house_1
+    2100040: cabinet_2
+    2100042: flag
+    2100044: roof
     2300000: polySurface56
     2300002: //RootNode
     2300004: pCube100
@@ -3127,6 +3140,8 @@ ModelImporter:
     2301374: pTorus14
     2301376: pTorus3
     2301378: pTorus9
+    2301380: polySurface1915
+    2301382: polySurface2024
     3300000: polySurface56
     3300002: //RootNode
     3300004: pCube100
@@ -3817,6 +3832,8 @@ ModelImporter:
     3301374: pTorus14
     3301376: pTorus3
     3301378: pTorus9
+    3301380: polySurface1915
+    3301382: polySurface2024
     4300000: polySurface56
     4300002: market1
     4300004: polySurface289
@@ -4507,6 +4524,8 @@ ModelImporter:
     4301374: pSphere55
     4301376: pSphere56
     4301378: pSphere57
+    4301380: polySurface1915
+    4301382: polySurface2024
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -4561,7 +4580,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.19999999
+    previousCalculatedGlobalScale: 0.59999996
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
