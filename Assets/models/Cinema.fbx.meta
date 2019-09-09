@@ -22,6 +22,20 @@ ModelImporter:
     100032: door8
     100034: door9
     100036: typeMesh
+    100038: carParkBarrier
+    100040: carParkBarrier1
+    100042: carParkPillar1
+    100044: carParkPillar2
+    100046: carParkSign
+    100048: carParkSign1
+    100050: window
+    100052: window2
+    100054: window3
+    100056: window4
+    100058: window5
+    100060: window6
+    100062: window7
+    100064: window8
     400000: //RootNode
     400002: cinema
     400004: door
@@ -41,9 +55,29 @@ ModelImporter:
     400032: door8
     400034: door9
     400036: typeMesh
+    400038: carParkBarrier
+    400040: carParkBarrier1
+    400042: carParkPillar1
+    400044: carParkPillar2
+    400046: carParkSign
+    400048: carParkSign1
+    400050: window
+    400052: window2
+    400054: window3
+    400056: window4
+    400058: window5
+    400060: window6
+    400062: window7
+    400064: window8
     2100000: lambert2
     2100002: blinn1
     2100004: lambert1
+    2100006: metal
+    2100008: glassDeco
+    2100010: lambert6
+    2100012: lambert7
+    2100014: lambert4
+    2100016: lambert5
     2300000: cinema
     2300002: door
     2300004: door1
@@ -62,6 +96,20 @@ ModelImporter:
     2300030: door8
     2300032: door9
     2300034: typeMesh
+    2300036: carParkBarrier
+    2300038: carParkBarrier1
+    2300040: carParkPillar1
+    2300042: carParkPillar2
+    2300044: carParkSign
+    2300046: carParkSign1
+    2300048: window
+    2300050: window2
+    2300052: window3
+    2300054: window4
+    2300056: window5
+    2300058: window6
+    2300060: window7
+    2300062: window8
     3300000: cinema
     3300002: door
     3300004: door1
@@ -80,6 +128,20 @@ ModelImporter:
     3300030: door8
     3300032: door9
     3300034: typeMesh
+    3300036: carParkBarrier
+    3300038: carParkBarrier1
+    3300040: carParkPillar1
+    3300042: carParkPillar2
+    3300044: carParkSign
+    3300046: carParkSign1
+    3300048: window
+    3300050: window2
+    3300052: window3
+    3300054: window4
+    3300056: window5
+    3300058: window6
+    3300060: window7
+    3300062: window8
     4300000: cinema
     4300002: door
     4300004: typeMesh
@@ -98,6 +160,20 @@ ModelImporter:
     4300030: door13
     4300032: door14
     4300034: door15
+    4300036: window2
+    4300038: window3
+    4300040: window
+    4300042: window4
+    4300044: window5
+    4300046: window6
+    4300048: window7
+    4300050: window8
+    4300052: carParkSign
+    4300054: carParkSign1
+    4300056: carParkBarrier
+    4300058: carParkPillar1
+    4300060: carParkBarrier1
+    4300062: carParkPillar2
   externalObjects: {}
   materials:
     importMaterials: 1
