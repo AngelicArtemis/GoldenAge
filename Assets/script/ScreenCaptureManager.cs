@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class ScreenCaptureManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ScreenCaptureManager : MonoBehaviour
     public GameObject inGameIcon; //you wanna hide this to take picture and then unhide this after taking picture
     bool cameraMode = false; //you can only take picture after turning on camera mode lol?
     public GameObject cameraEffect; //you'll see this when you turn on camera mode 
+    string lastPicture;
 
     private float keyDelay = 0.2f; //so you dont spam stuff omg
     private float timePassed = 0f;
@@ -44,6 +46,7 @@ public class ScreenCaptureManager : MonoBehaviour
 
     void Start()
     {
+
         //Set them both to 0 at start
         count = 0;
         ScreenCaps = 0;
@@ -51,8 +54,8 @@ public class ScreenCaptureManager : MonoBehaviour
 
         var scalethis = cameraEffect.transform as RectTransform;
         scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
-        scalethis = pictureTaken.transform as RectTransform;
-        scalethis.sizeDelta = new Vector2(Screen.width * 0.8f, Screen.height * 0.8f);
+        //scalethis = pictureTaken.transform as RectTransform;
+        //scalethis.sizeDelta = new Vector2(Screen.width * 0.7f, Screen.height * 0.7f);
 
     }
 
@@ -74,8 +77,12 @@ public class ScreenCaptureManager : MonoBehaviour
             cameraEffect.SetActive(false);
             takePicture();
             StartCoroutine(inGameIconBack());
+            displayLastPicture();
+            StartCoroutine(displayTimer());
+            cameraMode = false;
             timePassed = 0f;
         }
+
 
         if(Input.GetKey("h") && ingame == true && !cameraMode && timePassed >= keyDelay)
         {
@@ -116,9 +123,17 @@ public class ScreenCaptureManager : MonoBehaviour
         ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + (ScreenCaps + 1) + fileType);
         Debug.Log("ScreenCapture Taken!");
         Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
+        lastPicture = ScreenCapName + (ScreenCaps + 1)+ fileType;
+        Debug.Log("screencap name : " + lastPicture);
 
+        StartCoroutine(displayLastPicture());
     }
 
+    public IEnumerator displayTimer()
+    {
+        yield return new WaitForSeconds(2);
+        pictureTaken.SetActive(false);
+    }
     public IEnumerator inGameIconBack()
     {
         yield return new WaitForSeconds(0.5f);
@@ -135,11 +150,12 @@ public class ScreenCaptureManager : MonoBehaviour
         //how many files exist with the FileName entered
         count = 0;
 
+
         //This loops through the files in your entered Directory
         for (int i = 0; i < Directory.GetFiles(DirectoryPath).Length; i++)
         {
             //If any file has the same name as your picture
-            if (Directory.GetFiles(DirectoryPath)[i].Contains(FileName))
+            if (Directory.GetFiles(DirectoryPath)[i].Contains(FileName) && Directory.GetFiles(DirectoryPath)[i].EndsWith(fileType))
             {
                 //Add 1 to the count because we need to know how many
                 //files with the same name exist
@@ -155,12 +171,14 @@ public class ScreenCaptureManager : MonoBehaviour
     //or just have a single picture on the screen and have arrows to go back and next if there's such thing
     //and then load the the images into the boxes of ui
 
-        /*
-    public void displaypicture()
+    Texture2D myTexture;
+    public IEnumerator displayLastPicture()
     {
+        yield return new WaitForSeconds(0.1f);
+        pictureTaken.SetActive(true);
+        pictureTaken.GetComponentInChildren<RawImage>().texture = LoadImage("Assets\\testing\\" + lastPicture);
     }
 
-    //make a function that loops and call for this function 
     public static Texture2D LoadImage(string filename)
     {
         byte[] bytes = File.ReadAllBytes(filename);
@@ -170,5 +188,5 @@ public class ScreenCaptureManager : MonoBehaviour
 
         return texture;
     }
-    */
+
 }
