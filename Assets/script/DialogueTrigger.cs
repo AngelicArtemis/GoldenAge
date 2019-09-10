@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -13,11 +14,18 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+        if (Input.GetMouseButtonDown(0))
         {
         if (talking)
             {
-                FindObjectOfType<DialogueManager>().DisplayNextSentence();
+                if(FindObjectOfType<DialogueManager>().typing == false)
+                {
+                    FindObjectOfType<DialogueManager>().DisplayNextSentence();
+                }
             }
             else
             {
