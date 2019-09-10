@@ -30,7 +30,7 @@ public class ButtonManager : MonoBehaviour
         }
 
         var scalethis = mainMenu.transform as RectTransform;
-        scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
+        scalethis.sizeDelta = new Vector2(Screen.width, Screen.height); //???why arent ya working????
         float screenheight, screenwidth;
         screenheight = Screen.height;
         screenwidth = Screen.width;
