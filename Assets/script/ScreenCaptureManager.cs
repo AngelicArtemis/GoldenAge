@@ -16,6 +16,8 @@ public class ScreenCaptureManager : MonoBehaviour
     private float keyDelay = 0.2f; //so you dont spam stuff omg
     private float timePassed = 0f;
 
+    public GameObject pictureTaken; //the panel to show you the picture taken lol
+
     //ScreenCapDirectory: If you want a 
     //specific directory do something like this: "C:\\Users\\YourUserNameGoesHere\\Documents\\"
     //Or if you want to use Application.persistentDataPath put it in the 
@@ -49,6 +51,8 @@ public class ScreenCaptureManager : MonoBehaviour
 
         var scalethis = cameraEffect.transform as RectTransform;
         scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
+        scalethis = pictureTaken.transform as RectTransform;
+        scalethis.sizeDelta = new Vector2(Screen.width * 0.8f, Screen.height * 0.8f);
 
     }
 
@@ -151,6 +155,10 @@ public class ScreenCaptureManager : MonoBehaviour
     //or just have a single picture on the screen and have arrows to go back and next if there's such thing
     //and then load the the images into the boxes of ui
 
+        /*
+    public void displaypicture()
+    {
+    }
 
     //make a function that loops and call for this function 
     public static Texture2D LoadImage(string filename)
@@ -162,4 +170,5 @@ public class ScreenCaptureManager : MonoBehaviour
 
         return texture;
     }
+    */
 }
