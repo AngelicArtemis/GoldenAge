@@ -8,6 +8,15 @@ public class ScreenCaptureManager : MonoBehaviour
 
     //screenCaptureKey: Change this to any key you want. It is easily changeable in the editor
     public KeyCode screenCaptureKey = KeyCode.F2;
+    public bool ingame = false; //only take picture if you're ingame lol
+    public GameObject inGameIcon; //you wanna hide this to take picture and then unhide this after taking picture
+    bool cameraMode = false; //you can only take picture after turning on camera mode lol?
+    public GameObject cameraEffect; //you'll see this when you turn on camera mode 
+
+    private float keyDelay = 0.2f; //so you dont spam stuff omg
+    private float timePassed = 0f;
+
+    public GameObject pictureTaken; //the panel to show you the picture taken lol
 
     //ScreenCapDirectory: If you want a 
     //specific directory do something like this: "C:\\Users\\YourUserNameGoesHere\\Documents\\"
@@ -39,27 +48,84 @@ public class ScreenCaptureManager : MonoBehaviour
         count = 0;
         ScreenCaps = 0;
 
-        // ScreenCapDirectory = Application.persistentDataPath + "\\cameraSS";
+
+        var scalethis = cameraEffect.transform as RectTransform;
+        scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
+        scalethis = pictureTaken.transform as RectTransform;
+        scalethis.sizeDelta = new Vector2(Screen.width * 0.8f, Screen.height * 0.8f);
+
     }
 
     void Update()
     {
+
+        timePassed += Time.deltaTime;
+
+        // ScreenCapDirectory = Application.persistentDataPath + "\\cameraSS";
         //ScreenCaps: Say we have 2 files with the same name as your ScreenCapName,
         //            Well then this would just tell us 2 of those files exist.
         //            Then we add that value to our ScreenCaps number to reference later.
         ScreenCaps = (FindScreenCaptures(ScreenCapDirectory, ScreenCapName));
 
         //If we press our capture key
-        if (Input.GetKeyDown(screenCaptureKey))
+        if (Input.GetKeyDown(screenCaptureKey) && cameraMode == true && timePassed >= keyDelay)
         {
-            //This is how you save the screenshot to a certain directory and a certain name
-            //(ScreenCaps + 1): We reference this from above and use it for our picture name
-            //                  So if we know 2 files exist we add 1 to our value so it is a new picture.
-            ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + (ScreenCaps + 1) + fileType);
-            Debug.Log("ScreenCapture Taken!");
-            Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
+            turnitoff();
+            cameraEffect.SetActive(false);
+            takePicture();
+            StartCoroutine(inGameIconBack());
+            timePassed = 0f;
+        }
+
+        if(Input.GetKey("h") && ingame == true && !cameraMode && timePassed >= keyDelay)
+        {
+            inGameIcon.SetActive(false);
+            cameraEffect.SetActive(true);
+            cameraMode = true;
+            turniton();
+            timePassed = 0f;
+
+        }
+        if(Input.GetKey("h") && ingame == true && cameraMode && timePassed >= keyDelay)
+        {
+            inGameIcon.SetActive(true);
+            cameraEffect.SetActive(false);
+            cameraMode = false;
+            turnitoff();
+            timePassed = 0f;
         }
     }
+
+    void turnitoff()
+    {
+        postProcessingBehaviour vfx = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().GetComponentInChildren<postProcessingBehaviour>();
+        vfx.enabled = false;
+    }
+
+    void turniton()
+    {
+        postProcessingBehaviour vfx = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().GetComponentInChildren<postProcessingBehaviour>();
+        vfx.enabled = true;
+    }
+
+    void takePicture()
+    {
+        //This is how you save the screenshot to a certain directory and a certain name
+        //(ScreenCaps + 1): We reference this from above and use it for our picture name
+        //                  So if we know 2 files exist we add 1 to our value so it is a new picture.
+        ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + (ScreenCaps + 1) + fileType);
+        Debug.Log("ScreenCapture Taken!");
+        Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
+
+    }
+
+    public IEnumerator inGameIconBack()
+    {
+        yield return new WaitForSeconds(0.5f);
+        inGameIcon.SetActive(true);
+        Debug.Log("sets the dang icon active dang it");
+    }
+
 
     //This gets all the existing files from the Directory (DirectoryPath)
     //with the FileName(FileName).
@@ -89,6 +155,10 @@ public class ScreenCaptureManager : MonoBehaviour
     //or just have a single picture on the screen and have arrows to go back and next if there's such thing
     //and then load the the images into the boxes of ui
 
+        /*
+    public void displaypicture()
+    {
+    }
 
     //make a function that loops and call for this function 
     public static Texture2D LoadImage(string filename)
@@ -100,4 +170,5 @@ public class ScreenCaptureManager : MonoBehaviour
 
         return texture;
     }
+    */
 }

@@ -83,6 +83,7 @@ public class ButtonManager : MonoBehaviour
         StartCoroutine(disableCursor());
         inGameIcon.SetActive(true);
         mainMenu.SetActive(false);
+        FindObjectOfType<ScreenCaptureManager>().ingame = true;
     }
     
 
@@ -120,6 +121,7 @@ public class ButtonManager : MonoBehaviour
         mainMenu.SetActive(true);
         inGameMenu.SetActive(false);
         inGameIcon.SetActive(false);
+        FindObjectOfType<ScreenCaptureManager>().ingame = false;
     }
 
     public void exitGame()
