@@ -7,22 +7,13 @@ public class ParticleStuff : MonoBehaviour
 
     private bool playStars = false;
     public GameObject stars;
-    UnityEngine.Vector3 position;
-    public GameObject fpc;
+    public UnityEngine.Vector3 position; //put in the position through inspector
 
-    private void Start()
-    {
-        stars = GameObject.Find("PhotoHintFX");
-    }
-
-    private void Update()
-    {
-        position = fpc.transform.position;
-    }
     void OnTriggerEnter(Collider coll)
     {
         if (coll.gameObject.CompareTag("Player"))
         {
+            Debug.Log("hewwo?am i in the circle?");
             Explode();
         }
     }
