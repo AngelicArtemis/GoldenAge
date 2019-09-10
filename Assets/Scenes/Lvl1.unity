@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.124354675, g: 0.17978542, b: 0.26300237, a: 1}
+  m_IndirectSpecularColor: {r: 0.16754775, g: 0.34861955, b: 0.48170358, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8182,11 +8182,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 100254, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
+    - target: {fileID: 100256, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 100256, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
+    - target: {fileID: 101120, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100880, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100254, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -9430,10 +9438,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 100880, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 100886, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -9871,10 +9875,6 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 101114, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 101120, guid: 176ca4b1642207d4ba8340fdaf3ac507, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -63767,65 +63767,28 @@ PrefabInstance:
       propertyPath: Priority
       value: 187
       objectReference: {fileID: 0}
-    - target: {fileID: 8100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.878
       objectReference: {fileID: 0}
+    - target: {fileID: 8100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
---- !u!1 &2106761348 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2106761347}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2106761349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0,
     type: 3}
   m_PrefabInstance: {fileID: 2106761347}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2106761350 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2106761347}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2106761348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2106761351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
     type: 3}
   m_PrefabInstance: {fileID: 2106761347}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2106761352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2106761348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68f669e27dc7348e49f8574f108f3b40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pLook: {fileID: 252017183}
-  robot: {fileID: 0}
-  RobotDialogue: {fileID: 0}
-  RobotText: {fileID: 0}
-  PageNum: 0
-  text1: bye
-  firstPersonController: {fileID: 2106761350}
 --- !u!20 &2106761353 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -63876,6 +63839,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 07ff9cb30dd78944f87cac834aca7a7a, type: 2}
+--- !u!114 &2106761358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106761354}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f669e27dc7348e49f8574f108f3b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pLook: {fileID: 0}
+  robot: {fileID: 0}
+  RobotDialogue: {fileID: 0}
+  RobotText: {fileID: 0}
+  PageNum: 0
+  text1: 
+  firstPersonController: {fileID: 0}
 --- !u!1 &2112061876
 GameObject:
   m_ObjectHideFlags: 0

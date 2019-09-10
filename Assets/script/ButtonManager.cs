@@ -29,13 +29,15 @@ public class ButtonManager : MonoBehaviour
             buttsize.sizeDelta = new Vector2(Screen.width, Screen.height);
         }
 
+        var scalethis = mainMenu.transform as RectTransform;
+        scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
         float screenheight, screenwidth;
         screenheight = Screen.height;
         screenwidth = Screen.width;
         float scalex = screenwidth/738; //magic number, will probably fix this...or not who knows
         float scaley = screenheight/415;
 
-        var scalethis = testingscale.transform as RectTransform;
+        scalethis = testingscale.transform as RectTransform;
         scalethis.transform.localScale = new Vector3(scalex, scaley, 1);
 
     }
