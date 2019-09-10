@@ -6,9 +6,20 @@ public class ParticleStuff : MonoBehaviour
 {
 
     private bool playStars = false;
-    public GameObject stars;
-    public UnityEngine.Vector3 position; //put in the position through inspector
+    GameObject stars;
+    UnityEngine.Vector3 position;
+    public GameObject fpc;
 
+    private void Start()
+    {
+        //fpc = GameObject.Find("FPSController");
+        stars = GameObject.Find("PhotoHintFX");
+    }
+
+    private void Update()
+    {
+        position = fpc.transform.position;
+    }
     void OnTriggerEnter(Collider coll)
     {
         if (coll.gameObject.CompareTag("Player"))
