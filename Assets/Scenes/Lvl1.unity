@@ -7935,7 +7935,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerClose: 0
   playerLookingAtCollider: 0
-  photo: {fileID: 919024430}
 --- !u!135 &186168641
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27887,7 +27886,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerClose: 0
   playerLookingAtCollider: 0
-  photo: {fileID: 321384326}
 --- !u!114 &920755877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50441,7 +50439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6389326b2ddff854f9d714c8c700bc93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fpc: {fileID: 0}
+  fpc: {fileID: 1235935604}
 --- !u!114 &1378531928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50456,7 +50454,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerClose: 0
   playerLookingAtCollider: 0
-  photo: {fileID: 321384326}
 --- !u!135 &1378531929
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -62682,6 +62679,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563585903}
   m_Mesh: {fileID: 4300018, guid: d5e5b8e045352fd4d8ea10b3853494e3, type: 3}
+--- !u!1 &1569931595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569931597}
+  - component: {fileID: 1569931596}
+  m_Layer: 0
+  m_Name: TaskListManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1569931596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569931595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4613abd668a998c419c9f66db2fcd68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1569931597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569931595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 193.24, y: 2.34, z: 198.09999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578838672
 GameObject:
   m_ObjectHideFlags: 0
@@ -72817,7 +72857,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerClose: 0
   playerLookingAtCollider: 0
-  photo: {fileID: 366938201}
 --- !u!135 &1698625029
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class changeLv : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        /*
         if (other.gameObject.name == "playerTouch")
         {
             if (currentLevel == 0)
@@ -35,6 +36,7 @@ public class changeLv : MonoBehaviour {
                 currentLevel++;
             }
         }
+        */
     }
 
     // Update is called once per frame

@@ -14,6 +14,10 @@ public class ScreenCaptureManager : MonoBehaviour
     bool cameraMode = false; //you can only take picture after turning on camera mode lol?
     public GameObject cameraEffect; //you'll see this when you turn on camera mode 
     string lastPicture;
+    public GameObject taskComplete;
+    public GameObject toriTask;
+    public GameObject marketTask;
+    //public GameObject otherTask; //if you need it for futuer stuff lol
 
     private float keyDelay = 0.2f; //so you dont spam stuff omg
     private float timePassed = 0f;
@@ -27,9 +31,9 @@ public class ScreenCaptureManager : MonoBehaviour
 
 
 #if UNITY_EDITOR
-    private string ScreenCapDirectory = @"Assets\testing\";
+    public string ScreenCapDirectory = @"Assets\testing\";
 #else
-    private string ScreenCapDirectory = Application.persistentDataPath+"\\cameraSS";
+    public string ScreenCapDirectory = Application.persistentDataPath+"\\cameraSS";
 #endif
     //public string ScreenCapDirectory = "C:\\Users\\YourUserNameGoesHere\\Documents\\";
     //public string ScreenCapDirectory = Application.persistentDataPath+"\\cameraSS";  ONLY FOR BUILT SOLUTION! DOES NOT WORK IN UNITY EDITOR
@@ -71,16 +75,9 @@ public class ScreenCaptureManager : MonoBehaviour
         ScreenCaps = (FindScreenCaptures(ScreenCapDirectory, ScreenCapName));
 
         //If we press our capture key
-        if (Input.GetKeyDown(screenCaptureKey) && cameraMode == true && timePassed >= keyDelay)
+        if (Input.GetKey(screenCaptureKey) && cameraMode == true && timePassed >= keyDelay)
         {
-            turnitoff();
-            cameraEffect.SetActive(false);
-            takePicture();
-            StartCoroutine(inGameIconBack());
-            displayLastPicture();
-            StartCoroutine(displayTimer());
-            cameraMode = false;
-            timePassed = 0f;
+            nonTaskListPictures();
         }
 
 
@@ -103,6 +100,8 @@ public class ScreenCaptureManager : MonoBehaviour
         }
     }
 
+
+
     void turnitoff()
     {
         postProcessingBehaviour vfx = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().GetComponentInChildren<postProcessingBehaviour>();
@@ -115,6 +114,16 @@ public class ScreenCaptureManager : MonoBehaviour
         vfx.enabled = true;
     }
 
+    void nonTaskListPictures()
+    {
+        turnitoff();
+        cameraEffect.SetActive(false);
+        takePicture();
+        StartCoroutine(inGameIconBack());
+        StartCoroutine(displayTimer());
+        cameraMode = false;
+        timePassed = 0f;
+    }
     void takePicture()
     {
         //This is how you save the screenshot to a certain directory and a certain name
@@ -141,6 +150,50 @@ public class ScreenCaptureManager : MonoBehaviour
         Debug.Log("sets the dang icon active dang it");
     }
 
+    public bool taskListPicture(string placeName)
+    {
+        if (cameraMode == true && timePassed >= keyDelay)
+        {
+            turnitoff();
+
+            cameraEffect.SetActive(false);
+            ScreenCapture.CaptureScreenshot(ScreenCapDirectory + placeName  + fileType);
+            Debug.Log("Task list ScreenCapture Taken!");
+            Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
+            lastPicture = placeName + fileType;
+            Debug.Log("screencap name : " + lastPicture);
+
+            taskComplete.SetActive(true);
+            if(placeName == "tori")
+            {
+                toriTask.SetActive(true);
+            }
+            if(placeName == "market")
+            {
+                marketTask.SetActive(true);
+            }
+
+            StartCoroutine(displayLastPicture());
+            StartCoroutine(inGameIconBack());
+            StartCoroutine(displayTimer());
+            cameraMode = false;
+            timePassed = 0f;
+            //takingTaskListPicture = false;
+            return true;
+
+        }
+        return false;
+        
+    }
+
+    public bool taskListCheck(string taskname)
+    {
+        if(FindScreenCaptures(ScreenCapDirectory,taskname) > 0)
+        {
+            return true;
+        }
+        return false;
+    }
 
     //This gets all the existing files from the Directory (DirectoryPath)
     //with the FileName(FileName).
@@ -165,6 +218,8 @@ public class ScreenCaptureManager : MonoBehaviour
         //Once we know we return that amount
         return count;
     }
+
+
 
     //make a function to activate count number of boxes of ui 
     //we coult instantaniate? set alignment? 
