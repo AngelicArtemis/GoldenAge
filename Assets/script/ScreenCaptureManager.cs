@@ -31,7 +31,7 @@ public class ScreenCaptureManager : MonoBehaviour
     //Or if you want to use Application.persistentDataPath put it in the 
     //void Start() method and leave this string empty.
 
-    //public GameObject TakePhoto;
+    public GameObject TakePhotoSFX;
 
 
 #if UNITY_EDITOR
@@ -81,8 +81,7 @@ public class ScreenCaptureManager : MonoBehaviour
         //If we press our capture key
         if (Input.GetKey(screenCaptureKey) && cameraMode == true && timePassed >= keyDelay)
         {
-            /*TakePhoto.SetActive(true);
-            TakePhoto.GetComponent<AudioSource>().Play();*/
+            TakePhotoSFX.GetComponent<AudioSource>().Play();
 
             if(!taskPic)
             {

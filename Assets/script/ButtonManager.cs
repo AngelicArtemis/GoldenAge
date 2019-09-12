@@ -19,6 +19,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject[] sizeThis;
     public GameObject testingscale;
     public GameObject inGameIcon;
+    public GameObject clickSFX;
 
     private void Start()
     {
@@ -66,15 +67,6 @@ public class ButtonManager : MonoBehaviour
             timePassed = 0f;
         }
 
-        // Check if the left mouse button was clicked
-        if (Input.GetMouseButtonDown(0))
-        {
-            // Check if the mouse was clicked over a UI element
-            if (EventSystem.current.IsPointerOverGameObject())
-            {
-                Debug.Log("clicked on the UI");
-            }
-        }
     }
 
 
@@ -103,6 +95,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void returnToMainMenu()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         //returns to main menu
         string sceneName;
 
@@ -126,44 +119,52 @@ public class ButtonManager : MonoBehaviour
 
     public void exitGame()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         //exits game
         Application.Quit();
     }
 
     public void creditPage()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         //opens credit page
         credit.SetActive(true);
     }
 
     public void closeCredit()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         credit.SetActive(false);
     }
 
     public void libraryPage()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         //opens library page
     }
 
     public void instructionPage()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         //opens instruction page
         tutorialPage.SetActive(true);
     }
     public void closeInstruction()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         //close tutorialUI
         tutorialPage.SetActive(false);
     }
 
     public void map()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         //opens map
     }
 
     public void taskList()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         //opens task list
     }
 
