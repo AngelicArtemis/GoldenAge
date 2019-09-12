@@ -11,6 +11,7 @@ public class photoCollider : MonoBehaviour
     public static int photoCollected = 0;*/
     //public GameObject photo;
     TaskList tasklist = new TaskList();
+    public bool taskPic;
 
     // Use this for initialization
     void Start()
@@ -38,6 +39,32 @@ public class photoCollider : MonoBehaviour
         */
 
 
+        if(playerLookingAtCollider)// && playerClose == true)// && !tasklist.taskCompletion)
+        {
+            if(playerClose)
+            {
+                if(!tasklist.taskCompletion)
+                {
+                    Debug.Log("this is taskpic in collider");
+                    FindObjectOfType<ScreenCaptureManager>().taskPic = true;
+                    FindObjectOfType<ScreenCaptureManager>().taskPicName = tasklist.taskName;
+                }
+                if(tasklist.taskCompletion)
+                {
+
+                    Debug.Log("this is false1");
+                    FindObjectOfType<ScreenCaptureManager>().taskPic = false;
+                }
+                
+            }
+            if (!playerClose)
+            {
+                Debug.Log("this is false2");
+                FindObjectOfType<ScreenCaptureManager>().taskPic = false;
+            }
+        }
+
+        /*
 
         if (Input.GetKey("f"))
         {
@@ -58,6 +85,7 @@ public class photoCollider : MonoBehaviour
             Debug.Log("did something happen?");
 
         }
+        */
 
     }
 

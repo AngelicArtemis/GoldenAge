@@ -21,6 +21,8 @@ public class ScreenCaptureManager : MonoBehaviour
 
     private float keyDelay = 0.2f; //so you dont spam stuff omg
     private float timePassed = 0f;
+    public bool taskPic;
+    public string taskPicName;
 
     public GameObject pictureTaken; //the panel to show you the picture taken lol
 
@@ -77,7 +79,15 @@ public class ScreenCaptureManager : MonoBehaviour
         //If we press our capture key
         if (Input.GetKey(screenCaptureKey) && cameraMode == true && timePassed >= keyDelay)
         {
-            nonTaskListPictures();
+            if(!taskPic)
+            {
+                nonTaskListPictures();
+            }
+            if(taskPic)
+            {
+                Debug.Log("this is taskpic. in screencap");
+                taskListPicture(taskPicName);
+            }
         }
 
 
@@ -150,7 +160,7 @@ public class ScreenCaptureManager : MonoBehaviour
         Debug.Log("sets the dang icon active dang it");
     }
 
-    public bool taskListPicture(string placeName)
+    public void taskListPicture(string placeName)
     {
         if (cameraMode == true && timePassed >= keyDelay)
         {
@@ -179,10 +189,8 @@ public class ScreenCaptureManager : MonoBehaviour
             cameraMode = false;
             timePassed = 0f;
             //takingTaskListPicture = false;
-            return true;
 
         }
-        return false;
         
     }
 

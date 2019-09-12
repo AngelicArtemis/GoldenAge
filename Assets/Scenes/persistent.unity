@@ -4008,13 +4008,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df70f7604ec69e4d950aadfe43a98a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenCaptureKey: 283
+  screenCaptureKey: 102
   ingame: 0
   inGameIcon: {fileID: 2073378074}
   cameraEffect: {fileID: 2113198363}
   taskComplete: {fileID: 449520999}
   toriTask: {fileID: 528892300}
   marketTask: {fileID: 1733890327}
+  taskPic: 0
+  taskPicName: 
   pictureTaken: {fileID: 1996133805}
   ScreenCapDirectory: Assets\testing\
   ScreenCapName: Pictures
