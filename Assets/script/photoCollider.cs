@@ -41,13 +41,16 @@ public class photoCollider : MonoBehaviour
 
         if(playerLookingAtCollider)// && playerClose == true)// && !tasklist.taskCompletion)
         {
-            if(playerClose)
+
+            FindObjectOfType<TaskListManager>().taskChecker(tasklist);
+            if (playerClose)
             {
                 if(!tasklist.taskCompletion)
                 {
                     Debug.Log("this is taskpic in collider");
                     FindObjectOfType<ScreenCaptureManager>().taskPic = true;
                     FindObjectOfType<ScreenCaptureManager>().taskPicName = tasklist.taskName;
+                    FindObjectOfType<TaskListManager>().taskChecker(tasklist);
                 }
                 if(tasklist.taskCompletion)
                 {
