@@ -158,6 +158,7 @@ public class ScreenCaptureManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         pictureTaken.SetActive(false);
+        taskComplete.SetActive(false);
     }
     public IEnumerator inGameIconBack()
     {
@@ -195,6 +196,7 @@ public class ScreenCaptureManager : MonoBehaviour
             cameraMode = false;
             timePassed = 0f;
             //takingTaskListPicture = false;
+            //taskComplete.SetActive(false);
 
         }
         
