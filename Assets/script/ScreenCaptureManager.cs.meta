@@ -3,7 +3,14 @@ guid: 1df70f7604ec69e4d950aadfe43a98a2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - inGameIcon: {instanceID: 0}
+  - cameraEffect: {instanceID: 0}
+  - taskComplete: {instanceID: 0}
+  - toriTask: {instanceID: 0}
+  - marketTask: {instanceID: 0}
+  - pictureTaken: {instanceID: 0}
+  - TakePhoto: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

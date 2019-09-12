@@ -31,6 +31,8 @@ public class ScreenCaptureManager : MonoBehaviour
     //Or if you want to use Application.persistentDataPath put it in the 
     //void Start() method and leave this string empty.
 
+    //public GameObject TakePhoto;
+
 
 #if UNITY_EDITOR
     public string ScreenCapDirectory = @"Assets\testing\";
@@ -79,6 +81,9 @@ public class ScreenCaptureManager : MonoBehaviour
         //If we press our capture key
         if (Input.GetKey(screenCaptureKey) && cameraMode == true && timePassed >= keyDelay)
         {
+            /*TakePhoto.SetActive(true);
+            TakePhoto.GetComponent<AudioSource>().Play();*/
+
             if(!taskPic)
             {
                 nonTaskListPictures();
@@ -88,6 +93,7 @@ public class ScreenCaptureManager : MonoBehaviour
                 Debug.Log("this is taskpic. in screencap");
                 taskListPicture(taskPicName);
             }
+
         }
 
 
