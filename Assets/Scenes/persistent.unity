@@ -563,7 +563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &233797388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1334,7 +1334,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ebb21501637b9344bbbace466ad203da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11d85cfbbd8967e4b93ffa261cea5df3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4601,7 +4601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df70f7604ec69e4d950aadfe43a98a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenCaptureKey: 102
   ingame: 0
   inGameIcon: {fileID: 2073378074}
   cameraEffect: {fileID: 2113198363}
@@ -4759,7 +4758,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ebb21501637b9344bbbace466ad203da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b920104c58ae1d48896ab91b81c5e4a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

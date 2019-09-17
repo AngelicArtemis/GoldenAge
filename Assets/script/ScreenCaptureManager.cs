@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class ScreenCaptureManager : MonoBehaviour
 {
-
-    //screenCaptureKey: Change this to any key you want. It is easily changeable in the editor
-    public KeyCode screenCaptureKey = KeyCode.F2;
     public bool ingame = false; //only take picture if you're ingame lol
     public GameObject inGameIcon; //you wanna hide this to take picture and then unhide this after taking picture
     bool cameraMode = false; //you can only take picture after turning on camera mode lol?

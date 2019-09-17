@@ -9,17 +9,14 @@ public class TaskListManager : MonoBehaviour
     public GameObject[] tasks;
     int counter = 0;
     public GameObject complete;
-    List<TaskList> completedKyotoTasks = new List<TaskList>(); //if we get to london we'll make a list for london okei?
+    List<TaskList> completedTasks = new List<TaskList>(); //if we get to london we'll make a list for london okei?
 
     public void taskChecker(TaskList taskList)
     {
         if(FindObjectOfType<ScreenCaptureManager>().taskListCheck(taskList.taskName))
         {
             taskList.taskCompletion = true;
-            if(SceneManager.GetSceneAt(1).name == "lvl1" )
-            {
-                addsCompleted(completedKyotoTasks, taskList);
-            }
+            addsCompleted(completedTasks, taskList);
         }
 
     }
