@@ -22,21 +22,6 @@ public class MouseOverUIButtons : MonoBehaviour, IPointerEnterHandler, IPointerE
     }
     */
 
-    /*
-public void OnMouseOver()
-{
-    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
-
-    if (hit.collider != null && hit.collider.transform == this.transform)
-    {
-        // raycast hit this gameobject
-        Debug.Log("im not sure what im doing now");
-    }
-}
-*/
-
-
 
     
     public void OnPointerEnter(PointerEventData eventData)
