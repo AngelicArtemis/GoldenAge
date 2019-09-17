@@ -21,6 +21,10 @@ public class ButtonManager : MonoBehaviour
     public GameObject inGameIcon;
     public GameObject clickSFX;
 
+
+
+    public GameObject tasklistPage; //tasklist page
+
     private void Start()
     {
         
@@ -166,6 +170,8 @@ public class ButtonManager : MonoBehaviour
     {
         clickSFX.GetComponent<AudioSource>().Play();
         //opens task list
+        tasklistPage.SetActive(true);
+        FindObjectOfType<TaskListManager>().displayTasks();
     }
 
 

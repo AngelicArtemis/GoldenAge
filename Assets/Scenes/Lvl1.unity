@@ -12005,7 +12005,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 07e6dd073efdcad48a2196001f2ce7d0, type: 3}
       propertyPath: m_Name
-      value: newstation
+      value: newsstation
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 07e6dd073efdcad48a2196001f2ce7d0, type: 3}
       propertyPath: m_StaticEditorFlags
