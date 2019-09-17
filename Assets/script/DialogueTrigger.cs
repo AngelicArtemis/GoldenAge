@@ -22,9 +22,10 @@ public class DialogueTrigger : MonoBehaviour
         {
         if (talking)
             {
-                if(FindObjectOfType<DialogueManager>().typing == false)
+                FindObjectOfType<DialogueManager>().DisplayNextSentence();
+                if(FindObjectOfType<DialogueManager>().endChat)
                 {
-                    FindObjectOfType<DialogueManager>().DisplayNextSentence();
+                    talking = false;
                 }
             }
             else

@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     
     public Queue<string> sentences;
     public GameObject dialogBox;
-    public bool typing = false;
+    public bool endChat;
 
 
     private void Start()
@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     public void startDialogue(Dialogue dialogue)
     {
+        endChat = false;
         sentences.Clear();
         firstPersonController.enabled = false;
 
@@ -33,12 +34,9 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(typing)
-        {
-            return;
-        }
         if (sentences.Count == 0)
         {
+            endChat = true;
             endDialogue();
             return;
         }
@@ -50,14 +48,12 @@ public class DialogueManager : MonoBehaviour
     }
     IEnumerator TypeSentence(string sentence)
     {
-        typing = true;
         dialogBox.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogBox.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text += letter;
             yield return new WaitForSeconds(0.02f);
         }
-        typing = false;
     }
 
     void endDialogue()
