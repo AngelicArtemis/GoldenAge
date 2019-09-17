@@ -156,8 +156,8 @@ public class ScreenCaptureManager : MonoBehaviour
     public IEnumerator displayTimer()
     {
         yield return new WaitForSeconds(2);
-        pictureTaken.SetActive(false);
         taskComplete.SetActive(false);
+        pictureTaken.SetActive(false);
     }
     public IEnumerator inGameIconBack()
     {
