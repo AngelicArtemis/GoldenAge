@@ -78,7 +78,7 @@ MonoBehaviour:
       useCameraFov: 0
       kernelSize: 1
   motionBlur:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       shutterAngle: 270
       sampleCount: 10
@@ -124,11 +124,11 @@ MonoBehaviour:
         postExposure: 1.2
         temperature: 5
         tint: 0
-        hueShift: 0
+        hueShift: -4
         saturation: 1.1
-        contrast: 1
+        contrast: 1.1
       channelMixer:
-        red: {x: 1, y: 0, z: 0}
+        red: {x: 1, y: 0, z: -0.05}
         green: {x: 0, y: 1, z: 0}
         blue: {x: 0, y: 0, z: 1}
         currentEditingChannel: 0
@@ -139,9 +139,9 @@ MonoBehaviour:
           power: {r: 1, g: 1, b: 1, a: 0}
           offset: {r: 1, g: 1, b: 1, a: 0}
         linear:
-          lift: {r: 1, g: 1, b: 1, a: 0}
-          gamma: {r: 1, g: 1, b: 1, a: 0}
-          gain: {r: 0.9594494, g: 1, b: 0.61605, a: 0}
+          lift: {r: 0.92779183, g: 0.94055015, b: 1, a: 0}
+          gamma: {r: 0.8944153, g: 1, b: 0.8338561, a: 0}
+          gain: {r: 0.8067459, g: 1, b: 0.568595, a: 0}
       curves:
         master:
           curve:
