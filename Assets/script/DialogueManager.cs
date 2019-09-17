@@ -33,6 +33,10 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        if(typing)
+        {
+            return;
+        }
         if (sentences.Count == 0)
         {
             endDialogue();
