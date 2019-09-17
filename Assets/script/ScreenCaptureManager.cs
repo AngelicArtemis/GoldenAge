@@ -79,7 +79,7 @@ public class ScreenCaptureManager : MonoBehaviour
         ScreenCaps = (FindScreenCaptures(ScreenCapDirectory, ScreenCapName));
 
         //If we press our capture key
-        if (Input.GetKey(screenCaptureKey) && cameraMode == true && timePassed >= keyDelay)
+        if (Input.GetMouseButton(1) && cameraMode == true && timePassed >= keyDelay)
         {
             TakePhotoSFX.GetComponent<AudioSource>().Play();
 
@@ -96,7 +96,7 @@ public class ScreenCaptureManager : MonoBehaviour
         }
 
 
-        if(Input.GetKey("h") && ingame == true && !cameraMode && timePassed >= keyDelay)
+        if(Input.GetKey("f") && ingame == true && !cameraMode && timePassed >= keyDelay)
         {
             inGameIcon.SetActive(false);
             cameraEffect.SetActive(true);
@@ -105,7 +105,7 @@ public class ScreenCaptureManager : MonoBehaviour
             timePassed = 0f;
 
         }
-        if(Input.GetKey("h") && ingame == true && cameraMode && timePassed >= keyDelay)
+        if(Input.GetKey("f") && ingame == true && cameraMode && timePassed >= keyDelay)
         {
             inGameIcon.SetActive(true);
             cameraEffect.SetActive(false);
