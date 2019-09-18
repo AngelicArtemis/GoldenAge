@@ -5,7 +5,6 @@ using UnityEngine;
 public class ParticleStuff : MonoBehaviour
 {
 
-    private bool playStars = false;
     GameObject stars;
     UnityEngine.Vector3 position;
     public GameObject fpc;

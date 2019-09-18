@@ -30,14 +30,15 @@ public class ScreenCaptureManager : MonoBehaviour
 
     public GameObject TakePhotoSFX;
 
-
+    /*
 #if UNITY_EDITOR
     public string ScreenCapDirectory = @"Assets\testing\";
 #else
     public string ScreenCapDirectory = Application.persistentDataPath+"\\cameraSS";
 #endif
+    */
     //public string ScreenCapDirectory = "C:\\Users\\YourUserNameGoesHere\\Documents\\";
-    //public string ScreenCapDirectory = Application.persistentDataPath+"\\cameraSS";  ONLY FOR BUILT SOLUTION! DOES NOT WORK IN UNITY EDITOR
+    public string ScreenCapDirectory;// = Application.persistentDataPath+"\\cameraSS";  //ONLY FOR BUILT SOLUTION! DOES NOT WORK IN UNITY EDITOR
 
     //The name of the screen capture taken. Put anything you want
     public string ScreenCapName = "Pictures";
@@ -50,12 +51,18 @@ public class ScreenCaptureManager : MonoBehaviour
     private int ScreenCaps;
 
     void Start()
-    {
+    {   
 
         //Set them both to 0 at start
         count = 0;
         ScreenCaps = 0;
-
+        ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
+        //ScreenCapDirectory = Application.persistentDataPath;
+        //ScreenCapDirectory = Path.Combine( ScreenCapDirectory,"cameraSS\\");
+        if (!Directory.Exists(ScreenCapDirectory))
+        {
+            Directory.CreateDirectory(ScreenCapDirectory);
+        }
 
         var scalethis = cameraEffect.transform as RectTransform;
         scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
@@ -241,9 +248,9 @@ public class ScreenCaptureManager : MonoBehaviour
     Texture2D myTexture;
     public IEnumerator displayLastPicture()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
         pictureTaken.SetActive(true);
-        pictureTaken.GetComponentInChildren<RawImage>().texture = LoadImage("Assets\\testing\\" + lastPicture);
+        pictureTaken.GetComponentInChildren<RawImage>().texture = LoadImage(ScreenCapDirectory + lastPicture);
     }
 
     public static Texture2D LoadImage(string filename)

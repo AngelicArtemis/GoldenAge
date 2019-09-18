@@ -56,6 +56,7 @@ public class ButtonManager : MonoBehaviour
         {
             if (!inMenu)
             {
+                FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
                 StartCoroutine(enableCursor());
                 inGameMenu.SetActive(true);
                 inGameIcon.SetActive(false);
@@ -63,6 +64,7 @@ public class ButtonManager : MonoBehaviour
             }
             else if (inMenu)
             {
+                FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
                 StartCoroutine(disableCursor());
                 inGameMenu.SetActive(false);
                 inGameIcon.SetActive(true);
@@ -80,6 +82,7 @@ public class ButtonManager : MonoBehaviour
         inGameIcon.SetActive(true);
         mainMenu.SetActive(false);
         FindObjectOfType<ScreenCaptureManager>().ingame = true;
+        FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
     }
     
 
@@ -174,5 +177,9 @@ public class ButtonManager : MonoBehaviour
         FindObjectOfType<TaskListManager>().displayTasks();
     }
 
+    public void closeTaskList()
+    {
+
+    }
 
 }
