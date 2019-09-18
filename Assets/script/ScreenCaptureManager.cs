@@ -14,7 +14,7 @@ public class ScreenCaptureManager : MonoBehaviour
     public GameObject taskComplete;
     public GameObject toriTask;
     public GameObject marketTask;
-    //public GameObject otherTask; //if you need it for futuer stuff lol
+    //public GameObject otherTask; 
 
     private float keyDelay = 0.2f; //so you dont spam stuff omg
     private float timePassed = 0f;
@@ -23,27 +23,14 @@ public class ScreenCaptureManager : MonoBehaviour
 
     public GameObject pictureTaken; //the panel to show you the picture taken lol
 
-    //ScreenCapDirectory: If you want a 
-    //specific directory do something like this: "C:\\Users\\YourUserNameGoesHere\\Documents\\"
-    //Or if you want to use Application.persistentDataPath put it in the 
-    //void Start() method and leave this string empty.
+
 
     public GameObject TakePhotoSFX;
 
-    /*
-#if UNITY_EDITOR
-    public string ScreenCapDirectory = @"Assets\testing\";
-#else
-    public string ScreenCapDirectory = Application.persistentDataPath+"\\cameraSS";
-#endif
-    */
-    //public string ScreenCapDirectory = "C:\\Users\\YourUserNameGoesHere\\Documents\\";
-    public string ScreenCapDirectory;// = Application.persistentDataPath+"\\cameraSS";  //ONLY FOR BUILT SOLUTION! DOES NOT WORK IN UNITY EDITOR
+    public string ScreenCapDirectory;
 
-    //The name of the screen capture taken. Put anything you want
     public string ScreenCapName = "Pictures";
 
-    //This will be what type of file your screen capture is. Another type besides png is jpg.
     public string fileType = ".png";
 
     //Private variables to get how many screenshots exist
@@ -69,6 +56,7 @@ public class ScreenCaptureManager : MonoBehaviour
         scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
         //scalethis = pictureTaken.transform as RectTransform;
         //scalethis.sizeDelta = new Vector2(Screen.width * 0.7f, Screen.height * 0.7f);
+
 
     }
 
@@ -108,6 +96,7 @@ public class ScreenCaptureManager : MonoBehaviour
             cameraMode = true;
             turniton();
             timePassed = 0f;
+            FindObjectOfType<HintManager>().trigger = true;
 
         }
         if(Input.GetKey("f") && ingame == true && cameraMode && timePassed >= keyDelay)
@@ -126,6 +115,10 @@ public class ScreenCaptureManager : MonoBehaviour
     {
         postProcessingBehaviour vfx = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().GetComponentInChildren<postProcessingBehaviour>();
         vfx.enabled = false;
+        FindObjectOfType<HintManager>().trigger = false;
+        FindObjectOfType<HintManager>().init();
+        FindObjectOfType<HintManager>().unglowStuff();
+
     }
 
     void turniton()

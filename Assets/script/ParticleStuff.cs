@@ -11,7 +11,6 @@ public class ParticleStuff : MonoBehaviour
 
     private void Start()
     {
-        //fpc = GameObject.Find("FPSController");
         stars = GameObject.Find("PhotoHintFX");
     }
 
@@ -23,9 +22,14 @@ public class ParticleStuff : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player"))
         {
-            Debug.Log("hewwo?am i in the circle?");
+            FindObjectOfType<HintManager>().init();
+            FindObjectOfType<HintManager>().target = GetComponentInChildren<SphereCollider>().gameObject;
             Explode();
         }
+    }
+    void OnTriggerExit(Collider collider)
+    {
+        FindObjectOfType<HintManager>().target = null;
     }
     void Explode()
     {

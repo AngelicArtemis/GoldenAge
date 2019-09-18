@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RobotBody
   - toriiPhoto
+  - GlowHint
   layers:
   - Default
   - TransparentFX

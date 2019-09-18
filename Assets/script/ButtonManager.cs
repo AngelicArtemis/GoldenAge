@@ -82,7 +82,6 @@ public class ButtonManager : MonoBehaviour
         inGameIcon.SetActive(true);
         mainMenu.SetActive(false);
         FindObjectOfType<ScreenCaptureManager>().ingame = true;
-        FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
     }
     
 
