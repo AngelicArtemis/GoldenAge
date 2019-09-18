@@ -179,7 +179,7 @@ public class ButtonManager : MonoBehaviour
 
     public void closeTaskList()
     {
-
+        tasklistPage.SetActive(false);
     }
 
 }
