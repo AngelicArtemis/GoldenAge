@@ -56,9 +56,10 @@ public class ScreenCaptureManager : MonoBehaviour
         //Set them both to 0 at start
         count = 0;
         ScreenCaps = 0;
-        ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
+        //ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
         //ScreenCapDirectory = Application.persistentDataPath;
         //ScreenCapDirectory = Path.Combine( ScreenCapDirectory,"cameraSS\\");
+        ScreenCapDirectory = @"Assets\testing\";
         if (!Directory.Exists(ScreenCapDirectory))
         {
             Directory.CreateDirectory(ScreenCapDirectory);
