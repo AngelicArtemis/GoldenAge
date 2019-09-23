@@ -25,18 +25,6 @@ public class photoCollider : MonoBehaviour
     void Update()
     {
 
-        /*
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (playerLookingAtCollider == true && playerClose == true && checkPhotoTaken == 0)
-            {
-                checkPhotoTaken = 1;
-                photoCollected = photoCollected + 1;
-                photo.SetActive(true);
-                Debug.Log("photoActive = true");
-            }
-        }
-        */
 
 
         if(playerLookingAtCollider)// && playerClose == true)// && !tasklist.taskCompletion)
@@ -67,52 +55,38 @@ public class photoCollider : MonoBehaviour
             }
         }
 
-        /*
-
-        if (Input.GetKey("f"))
-        {
-            Debug.Log("task completion is" + tasklist.taskCompletion);
-            if (playerLookingAtCollider == true && playerClose == true && !tasklist.taskCompletion)
-            {
-                if (FindObjectOfType<ScreenCaptureManager>().taskListPicture(tasklist.taskName))
-                {
-                    tasklist.taskCompletion = true;
-                    Debug.Log("pressed f and took a pic");
-                }
-                else
-                {
-                    tasklist.taskCompletion = false;
-                    Debug.Log("hewwo? what is this??");
-                }
-            }
-            Debug.Log("did something happen?");
-
-        }
-        */
 
     }
 
     void setTaskName() //maybe put a loop and put the word in an array to loop through...eh we're still in testing
     {
-        if (gameObject.name.Contains("tori"))
+        if (gameObject.name.ToLower().Contains("tori"))
         {
             tasklist.taskName = "tori";
         }
-        else if (gameObject.name.Contains("market"))
+        else if (gameObject.name.ToLower().Contains("market"))
         {
             tasklist.taskName = "market";
         }
-        else if(gameObject.name.Contains("tower"))
+        else if(gameObject.name.ToLower().Contains("tower"))
         {
             tasklist.taskName = "tower";
         }
-        else if(gameObject.name.Contains("kinkakuji"))
+        else if(gameObject.name.ToLower().Contains("kinkakuji"))
         {
             tasklist.taskName = "kinkakuji";
         }
+        else if (gameObject.name.ToLower().Contains("news"))
+        {
+            tasklist.taskName = "news";
+        }
+        else if (gameObject.name.ToLower().Contains("cinema"))
+        {
+            tasklist.taskName = "cinema";
+        }
         else
         {
-            tasklist.taskName = "";
+            tasklist.taskName = "what";
         }
     }
 
