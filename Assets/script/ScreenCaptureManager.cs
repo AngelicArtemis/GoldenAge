@@ -12,9 +12,16 @@ public class ScreenCaptureManager : MonoBehaviour
     public GameObject cameraEffect; //you'll see this when you turn on camera mode 
     string lastPicture;
     public GameObject taskComplete;
+
+
+
+    //a list of ui objects to show which task is completed at display last picture taken
     public GameObject toriTask;
     public GameObject marketTask;
-    //public GameObject otherTask; //if you need it for futuer stuff lol
+    public GameObject newsTask;
+    public GameObject towerTask;
+    public GameObject cinemaTask;
+    public GameObject kinkakujiTask;
 
     private float keyDelay = 0.2f; //so you dont spam stuff omg
     private float timePassed = 0f;
@@ -192,6 +199,22 @@ public class ScreenCaptureManager : MonoBehaviour
             if(placeName == "market")
             {
                 marketTask.SetActive(true);
+            }
+            if (placeName == "news")
+            {
+                newsTask.SetActive(true);
+            }
+            if (placeName == "tower")
+            {
+                towerTask.SetActive(true);
+            }
+            if (placeName == "cinema")
+            {
+                cinemaTask.SetActive(true);
+            }
+            if (placeName == "kinkakuji")
+            {
+                kinkakujiTask.SetActive(true);
             }
 
             StartCoroutine(displayLastPicture());

@@ -20,6 +20,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject testingscale;
     public GameObject inGameIcon;
     public GameObject clickSFX;
+    bool scaleMainMenu = false;
 
 
 
@@ -34,21 +35,25 @@ public class ButtonManager : MonoBehaviour
             buttsize.sizeDelta = new Vector2(Screen.width, Screen.height);
         }
 
-        var scalethis = mainMenu.transform as RectTransform;
-        scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
         float screenheight, screenwidth;
         screenheight = Screen.height;
         screenwidth = Screen.width;
         float scalex = screenwidth/738; //magic number, will probably fix this...or not who knows
         float scaley = screenheight/415;
 
-        scalethis = testingscale.transform as RectTransform;
+        var scalethis = testingscale.transform as RectTransform;
         scalethis.transform.localScale = new Vector3(scalex, scaley, 1);
 
     }
     private void Update()
     {
         //opens ingame menu
+        if(!scaleMainMenu)
+        {
+            var mainmenuscale = mainMenu.transform as RectTransform;
+            mainmenuscale.sizeDelta = new Vector2(Screen.width, Screen.height);
+            scaleMainMenu = true;
+        }
 
         timePassed += Time.deltaTime;
         //print(timePassed);
@@ -82,7 +87,7 @@ public class ButtonManager : MonoBehaviour
         inGameIcon.SetActive(true);
         mainMenu.SetActive(false);
         FindObjectOfType<ScreenCaptureManager>().ingame = true;
-        FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+        //FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
     }
     
 
@@ -179,6 +184,7 @@ public class ButtonManager : MonoBehaviour
 
     public void closeTaskList()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         tasklistPage.SetActive(false);
     }
 

@@ -9,19 +9,25 @@ public class TaskListManager : MonoBehaviour
     public GameObject[] tasks;
     int counter = 0;
     public GameObject complete;
-    List<TaskList> completedTasks = new List<TaskList>(); //if we get to london we'll make a list for london okei?
+    List<TaskList> completedKyotoTasks = new List<TaskList>(); 
+    List<TaskList> completedLondonTasks = new List<TaskList>();
+    public int numberOfTaskInKyoto;
+    public GameObject clickSFX;
 
     public void taskChecker(TaskList taskList)
     {
         if(FindObjectOfType<ScreenCaptureManager>().taskListCheck(taskList.taskName))
         {
             taskList.taskCompletion = true;
-            addsCompleted(completedTasks, taskList);
+            if(SceneManager.GetSceneAt(1).name == "lvl1")
+                addsCompleted(completedKyotoTasks, taskList);
+            if(SceneManager.GetSceneAt(1).name == "lvl2")
+                addsCompleted(completedLondonTasks, taskList);
         }
 
     }
 
-    void addsCompleted(List<TaskList> city, TaskList task) //use this for lib display one day lol when there's more then one city in the lib
+    void addsCompleted(List<TaskList> city, TaskList task) //use this for lib display one day lol when there's lib
     {
         for(int i=0; i < city.Count; i++)
         {
@@ -31,6 +37,20 @@ public class TaskListManager : MonoBehaviour
             }
         }
         city.Add(task);
+    }
+
+
+    public string checkTaskPicCity(string picName)
+    {
+        for(int i=0; i < completedKyotoTasks.Count; i++)
+        {
+            if(picName == completedKyotoTasks[i].taskName)
+            {
+                return "kyoto";
+            }
+
+        }
+        return "london";
     }
 
     bool taskCheckerName(string taskname)
@@ -57,6 +77,8 @@ public class TaskListManager : MonoBehaviour
 
     public void displayNext()
     {
+
+        clickSFX.GetComponent<AudioSource>().Play();
         counter += 1;
         if (counter >= tasks.Length)
         {
@@ -69,5 +91,18 @@ public class TaskListManager : MonoBehaviour
         displayTasks();
     }
 
-
+    public void displayPrevious()
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        counter -= 1;
+        if (counter < 0)
+        {
+            counter = tasks.Length -1;
+            tasks[0].SetActive(false);
+            displayTasks();
+            return;
+        }
+        tasks[counter + 1].SetActive(false);
+        displayTasks();
+    }
 }
