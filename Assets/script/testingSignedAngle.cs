@@ -32,8 +32,8 @@ public class testingSignedAngle : MonoBehaviour
 
         sphere2.transform.position = cubePosition - targetDir;
         sphere2Position = sphere2.transform.position;
-        sphere2Position.x = targetDir.x;
-        sphere2.
+        sphere2Position.x += 2*targetDir.x;
+        //sphere2Position.y = targetDir.y
         sphere2.transform.position = sphere2Position;
 
 
