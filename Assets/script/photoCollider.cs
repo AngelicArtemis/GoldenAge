@@ -12,6 +12,9 @@ public class photoCollider : MonoBehaviour
     //public GameObject photo;
     TaskList tasklist = new TaskList();
     public bool taskPic;
+    GameObject player;
+    Vector3 facingDir;
+    GameObject directionOfPhoto;
 
     // Use this for initialization
     void Start()
@@ -19,13 +22,14 @@ public class photoCollider : MonoBehaviour
         Debug.Log(gameObject.name);
         setTaskName();
         FindObjectOfType<TaskListManager>().taskChecker(tasklist);
+        player = FindObjectOfType<CharacterController>().gameObject;
+        directionOfPhoto = gameObject.GetComponentInChildren<Collider>().gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
+        checkLooking();
 
         if(playerLookingAtCollider)// && playerClose == true)// && !tasklist.taskCompletion)
         {
@@ -97,11 +101,12 @@ public class photoCollider : MonoBehaviour
             playerClose = true;
             Debug.Log("playerClose = true");
         }
+        /*
         if(collider.gameObject.name == "playerTouch")
         {
             playerLookingAtCollider = true;
             Debug.Log("playerLookingAtCollider = true");
-        }
+        }*/
     }
 
     void OnTriggerExit(Collider collider)
@@ -111,10 +116,31 @@ public class photoCollider : MonoBehaviour
             playerClose = false;
             Debug.Log("playerClose = false");
         }
+        /*
         if (collider.gameObject.name == "playerTouch")
         {
             playerLookingAtCollider = false;
             Debug.Log("playerLookingAtCollider = false");
+        }*/
+    }
+
+    void checkLooking()
+    {
+        facingDir = player.transform.forward;
+        RaycastHit hit;
+        
+        if (Physics.Raycast(player.transform.position,facingDir , out hit))
+        {
+            //Debug.Log(hit.transform.gameObject.name); //returns the name of the object the ray hit
+            if (hit.transform.gameObject== directionOfPhoto)
+            {
+                Debug.Log("you hit the goal!!!");
+                playerLookingAtCollider = true;
+            }
+        }
+        else
+        {
+            playerLookingAtCollider = false;
         }
     }
 }
