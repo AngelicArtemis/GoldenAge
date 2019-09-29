@@ -30,27 +30,12 @@ public class ScreenCaptureManager : MonoBehaviour
 
     public GameObject pictureTaken; //the panel to show you the picture taken lol
 
-    //ScreenCapDirectory: If you want a 
-    //specific directory do something like this: "C:\\Users\\YourUserNameGoesHere\\Documents\\"
-    //Or if you want to use Application.persistentDataPath put it in the 
-    //void Start() method and leave this string empty.
-
     public GameObject TakePhotoSFX;
 
-    /*
-#if UNITY_EDITOR
-    public string ScreenCapDirectory = @"Assets\testing\";
-#else
-    public string ScreenCapDirectory = Application.persistentDataPath+"\\cameraSS";
-#endif
-    */
-    //public string ScreenCapDirectory = "C:\\Users\\YourUserNameGoesHere\\Documents\\";
-    public string ScreenCapDirectory;// = Application.persistentDataPath+"\\cameraSS";  //ONLY FOR BUILT SOLUTION! DOES NOT WORK IN UNITY EDITOR
+    public string ScreenCapDirectory;
 
-    //The name of the screen capture taken. Put anything you want
     public string ScreenCapName = "Pictures";
 
-    //This will be what type of file your screen capture is. Another type besides png is jpg.
     public string fileType = ".png";
 
     //Private variables to get how many screenshots exist
@@ -83,12 +68,7 @@ public class ScreenCaptureManager : MonoBehaviour
     {
 
         timePassed += Time.deltaTime;
-
-        // ScreenCapDirectory = Application.persistentDataPath + "\\cameraSS";
-        //ScreenCaps: Say we have 2 files with the same name as your ScreenCapName,
-        //            Well then this would just tell us 2 of those files exist.
-        //            Then we add that value to our ScreenCaps number to reference later.
-        ScreenCaps = (FindScreenCaptures(ScreenCapDirectory, ScreenCapName));
+        //ScreenCaps = (FindScreenCaptures(ScreenCapDirectory, ScreenCapName));
 
         //If we press our capture key
         if (Input.GetMouseButton(1) && cameraMode == true && timePassed >= keyDelay)
@@ -156,10 +136,13 @@ public class ScreenCaptureManager : MonoBehaviour
         //This is how you save the screenshot to a certain directory and a certain name
         //(ScreenCaps + 1): We reference this from above and use it for our picture name
         //                  So if we know 2 files exist we add 1 to our value so it is a new picture.
-        ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + (ScreenCaps + 1) + fileType);
+        string datetime = (System.DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss"));
+        //ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + (ScreenCaps + 1) + fileType);
+        ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + " " + datetime + fileType);
+
         Debug.Log("ScreenCapture Taken!");
         Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
-        lastPicture = ScreenCapName + (ScreenCaps + 1)+ fileType;
+        lastPicture = ScreenCapName + " " + datetime + fileType;
         Debug.Log("screencap name : " + lastPicture);
 
         StartCoroutine(displayLastPicture());

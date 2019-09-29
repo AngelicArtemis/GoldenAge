@@ -31,11 +31,11 @@ public class photoCollider : MonoBehaviour
     {
         checkLooking();
 
-        if(playerLookingAtCollider)// && playerClose == true)// && !tasklist.taskCompletion)
+        if(playerClose)// && playerClose == true)// && !tasklist.taskCompletion)
         {
 
             FindObjectOfType<TaskListManager>().taskChecker(tasklist);
-            if (playerClose)
+            if (playerLookingAtCollider)
             {
                 if(!tasklist.taskCompletion)
                 {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13049199, g: 0.09310198, b: 0.23291773, a: 1}
+  m_IndirectSpecularColor: {r: 0.1648114, g: 0.34344876, b: 0.4743863, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7926,7 +7926,6 @@ GameObject:
   m_Component:
   - component: {fileID: 883418657}
   - component: {fileID: 883418659}
-  - component: {fileID: 883418658}
   m_Layer: 0
   m_Name: PortalRender_Camera
   m_TagString: Untagged
@@ -7948,14 +7947,6 @@ Transform:
   m_Father: {fileID: 2108024920}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &883418658
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883418656}
-  m_Enabled: 1
 --- !u!20 &883418659
 Camera:
   m_ObjectHideFlags: 0

@@ -6,11 +6,11 @@ public class FireworksDelay : MonoBehaviour
 {
     public float waitTime;
     float timer;
-    float actualWait;
+    ParticleSystem firework;
 
     private void Start()
     {
-        float actualWait = waitTime + 5;
+        firework = gameObject.GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -18,11 +18,18 @@ public class FireworksDelay : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= actualWait)
+        if(timer >= waitTime)
         {
-            gameObject.GetComponent<ParticleSystem>().Play();
-
-            timer = 0;
+            if (!firework.isPlaying)
+            {
+                firework.Play();
+                var emmision = firework.emission;
+                emmision.enabled = true;
+                Debug.Log(firework.isPlaying);
+                timer = 0;
+            }
         }
+
+        Debug.Log(timer);
     }
 }

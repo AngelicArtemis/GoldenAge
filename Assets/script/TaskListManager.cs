@@ -24,6 +24,10 @@ public class TaskListManager : MonoBehaviour
             if(SceneManager.GetSceneAt(1).name == "lvl2")
                 addsCompleted(completedLondonTasks, taskList);
         }
+        else
+        {
+            taskList.taskCompletion = false;
+        }
 
     }
 
