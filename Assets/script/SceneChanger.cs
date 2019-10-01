@@ -36,7 +36,7 @@ public class SceneChanger : MonoBehaviour
     }
     public void lvl2()
     {
-        SceneManager.LoadSceneAsync("Lvl2", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("Lvl0", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("Lvl1");
 
     }
