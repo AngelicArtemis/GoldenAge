@@ -12,6 +12,7 @@ public class ScreenCaptureManager : MonoBehaviour
     public GameObject cameraEffect; //you'll see this when you turn on camera mode 
     string lastPicture;
     public GameObject taskComplete;
+    public bool inMenu = false;
 
 
 
@@ -44,8 +45,6 @@ public class ScreenCaptureManager : MonoBehaviour
 
     void Start()
     {   
-
-        //Set them both to 0 at start
         count = 0;
         ScreenCaps = 0;
         //ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
@@ -59,8 +58,6 @@ public class ScreenCaptureManager : MonoBehaviour
 
         var scalethis = cameraEffect.transform as RectTransform;
         scalethis.sizeDelta = new Vector2(Screen.width, Screen.height);
-        //scalethis = pictureTaken.transform as RectTransform;
-        //scalethis.sizeDelta = new Vector2(Screen.width * 0.7f, Screen.height * 0.7f);
 
     }
 
@@ -68,9 +65,6 @@ public class ScreenCaptureManager : MonoBehaviour
     {
 
         timePassed += Time.deltaTime;
-        //ScreenCaps = (FindScreenCaptures(ScreenCapDirectory, ScreenCapName));
-
-        //If we press our capture key
         if (Input.GetMouseButton(1) && cameraMode == true && timePassed >= keyDelay)
         {
             TakePhotoSFX.GetComponent<AudioSource>().Play();
@@ -87,24 +81,29 @@ public class ScreenCaptureManager : MonoBehaviour
 
         }
 
-
-        if(Input.GetKey("f") && ingame == true && !cameraMode && timePassed >= keyDelay)
+        if(!inMenu)
         {
-            inGameIcon.SetActive(false);
-            cameraEffect.SetActive(true);
-            cameraMode = true;
-            turniton();
-            timePassed = 0f;
+            if (Input.GetKey("f") && ingame == true && !cameraMode && timePassed >= keyDelay)
+            {
+                inGameIcon.SetActive(false);
+                cameraEffect.SetActive(true);
+                cameraMode = true;
+                turniton();
+                timePassed = 0f;
+
+            }
+            if(Input.GetKey("f") && ingame == true && cameraMode && timePassed >= keyDelay)
+            {
+                inGameIcon.SetActive(true);
+                cameraEffect.SetActive(false);
+                cameraMode = false;
+                turnitoff();
+                timePassed = 0f;
+            }
 
         }
-        if(Input.GetKey("f") && ingame == true && cameraMode && timePassed >= keyDelay)
-        {
-            inGameIcon.SetActive(true);
-            cameraEffect.SetActive(false);
-            cameraMode = false;
-            turnitoff();
-            timePassed = 0f;
-        }
+
+       
     }
 
 
@@ -133,9 +132,6 @@ public class ScreenCaptureManager : MonoBehaviour
     }
     void takePicture()
     {
-        //This is how you save the screenshot to a certain directory and a certain name
-        //(ScreenCaps + 1): We reference this from above and use it for our picture name
-        //                  So if we know 2 files exist we add 1 to our value so it is a new picture.
         string datetime = (System.DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss"));
         //ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + (ScreenCaps + 1) + fileType);
         ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + " " + datetime + fileType);
@@ -205,8 +201,6 @@ public class ScreenCaptureManager : MonoBehaviour
             StartCoroutine(displayTimer());
             cameraMode = false;
             timePassed = 0f;
-            //takingTaskListPicture = false;
-            //taskComplete.SetActive(false);
 
         }
         
@@ -221,38 +215,23 @@ public class ScreenCaptureManager : MonoBehaviour
         return false;
     }
 
-    //This gets all the existing files from the Directory (DirectoryPath)
-    //with the FileName(FileName).
+
     int FindScreenCaptures(string DirectoryPath, string FileName)
     {
-        //Set count to 0 at every run so we count up from 0 to 
-        //how many files exist with the FileName entered
         count = 0;
 
-
-        //This loops through the files in your entered Directory
         for (int i = 0; i < Directory.GetFiles(DirectoryPath).Length; i++)
         {
-            //If any file has the same name as your picture
             if (Directory.GetFiles(DirectoryPath)[i].Contains(FileName) && Directory.GetFiles(DirectoryPath)[i].EndsWith(fileType))
             {
-                //Add 1 to the count because we need to know how many
-                //files with the same name exist
                 count += 1;
             }
         }
-        //Once we know we return that amount
         return count;
     }
 
 
-
-    //make a function to activate count number of boxes of ui 
-    //we coult instantaniate? set alignment? 
-    //or just have a single picture on the screen and have arrows to go back and next if there's such thing
-    //and then load the the images into the boxes of ui
-
-    Texture2D myTexture;
+    //Texture2D myTexture;
     public IEnumerator displayLastPicture()
     {
         yield return new WaitForSeconds(0.15f);
@@ -269,5 +248,7 @@ public class ScreenCaptureManager : MonoBehaviour
 
         return texture;
     }
+
+
 
 }
