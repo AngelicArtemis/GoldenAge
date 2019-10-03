@@ -20,7 +20,9 @@ public class ButtonManager : MonoBehaviour
     public GameObject testingscale;
     public GameObject inGameIcon;
     public GameObject clickSFX;
+    public GameObject libraryUI;
     bool scaleMainMenu = false;
+    public GameObject[] UIpages;
 
 
 
@@ -66,6 +68,7 @@ public class ButtonManager : MonoBehaviour
                 inGameMenu.SetActive(true);
                 inGameIcon.SetActive(false);
                 inMenu = true;
+                FindObjectOfType<ScreenCaptureManager>().inMenu = true;
             }
             else if (inMenu)
             {
@@ -74,12 +77,21 @@ public class ButtonManager : MonoBehaviour
                 inGameMenu.SetActive(false);
                 inGameIcon.SetActive(true);
                 inMenu = false;
+                FindObjectOfType<ScreenCaptureManager>().inMenu = false;
+                closeAllUI();
             }
             timePassed = 0f;
         }
 
     }
 
+    void closeAllUI()
+    {
+        for (int i=0; i<UIpages.Length;i++)
+        {
+            UIpages[i].SetActive(false);
+        }
+    }
 
     public void startGame()
     {
@@ -153,6 +165,9 @@ public class ButtonManager : MonoBehaviour
     {
         clickSFX.GetComponent<AudioSource>().Play();
         //opens library page
+        inGameMenu.SetActive(false);
+        libraryUI.SetActive(true);
+        FindObjectOfType<LibraryControl>().Init();
     }
 
     public void instructionPage()
@@ -188,4 +203,9 @@ public class ButtonManager : MonoBehaviour
         tasklistPage.SetActive(false);
     }
 
+    public void closeLibrary()
+    {
+        libraryUI.SetActive(false);
+        inGameMenu.SetActive(true);
+    }
 }
