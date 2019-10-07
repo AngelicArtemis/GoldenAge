@@ -30,6 +30,5 @@ public class FireworksDelay : MonoBehaviour
             }
         }
 
-        Debug.Log(timer);
     }
 }

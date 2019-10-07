@@ -42,9 +42,9 @@ public class SceneChanger : MonoBehaviour
         SceneManager.UnloadSceneAsync("Lvl1");
 
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collide)
     {
-        if (other.gameObject.name == "playerTouch")
+        if (collide.gameObject.name == "playerTouch")
         {
             if(sceneName == "Lvl1")//&& photoCollider.photoCollected == 3) rather than putting it here, make it so
                 //that the portal only appear AFTER you finish collecting the three pics
