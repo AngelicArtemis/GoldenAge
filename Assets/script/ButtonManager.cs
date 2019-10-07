@@ -23,8 +23,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject libraryUI;
     bool scaleMainMenu = false;
     public GameObject[] UIpages;
-
-
+   
 
     public GameObject tasklistPage; //tasklist page
 
@@ -163,11 +162,17 @@ public class ButtonManager : MonoBehaviour
 
     public void libraryPage()
     {
-        clickSFX.GetComponent<AudioSource>().Play();
         //opens library page
         inGameMenu.SetActive(false);
         libraryUI.SetActive(true);
-        FindObjectOfType<LibraryControl>().Init();
+        FindObjectOfType<LibraryControl>().openLibs();
+
+    }
+    public void closeLibrary()
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        libraryUI.SetActive(false);
+        inGameMenu.SetActive(true);
     }
 
     public void instructionPage()
@@ -203,9 +208,4 @@ public class ButtonManager : MonoBehaviour
         tasklistPage.SetActive(false);
     }
 
-    public void closeLibrary()
-    {
-        libraryUI.SetActive(false);
-        inGameMenu.SetActive(true);
-    }
 }

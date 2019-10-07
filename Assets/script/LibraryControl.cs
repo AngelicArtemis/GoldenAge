@@ -9,8 +9,12 @@ public class LibraryControl : MonoBehaviour
 {
     string ScreenCapDirectory = @"Assets\testing\";
     string ScreenCapName = "Pictures";
+    public GameObject nonTaskLib;
+    public GameObject lib;
+    public GameObject taskLib;
 
-    int page;
+    public GameObject clickSFX;
+    int page = 0;
     int totalPages;
     int totalPics;
 
@@ -26,6 +30,11 @@ public class LibraryControl : MonoBehaviour
 
     public void Init()
     {
+        pictures.Clear();
+#if UNITY_EDITOR
+        UnityEditor.AssetDatabase.Refresh();
+#endif
+
         Picture temp;
 
         for (int i = 0; i < Directory.GetFiles(ScreenCapDirectory).Length; i++) //loads all the images into an array of texture
@@ -38,7 +47,6 @@ public class LibraryControl : MonoBehaviour
             }
         }
 
-        page = 0;
         totalPics = pictures.Count;
         totalPages = (int)Mathf.Ceil(totalPics/4);
 
@@ -47,6 +55,8 @@ public class LibraryControl : MonoBehaviour
 
     public void nextPage()
     {
+
+        clickSFX.GetComponent<AudioSource>().Play();
         page += 1;
         if (page > totalPages)
         {
@@ -57,10 +67,11 @@ public class LibraryControl : MonoBehaviour
 
     public void previousPage()
     {
+        clickSFX.GetComponent<AudioSource>().Play();
         page -= 1;
         if (page < 0)
         {
-            page = totalPages - 1;
+            page = totalPages;
         }
         libDisplay(page);
     }
@@ -103,6 +114,68 @@ public class LibraryControl : MonoBehaviour
         texture.LoadImage(bytes);
 
         return texture;
+    }
+
+    public void openLibs()
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        lib.SetActive(true);
+        taskLib.SetActive(false);
+        nonTaskLib.SetActive(false);
+    }
+    public void DisplayTaskPics()
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        lib.SetActive(false);
+        taskLib.SetActive(true);
+    }
+
+    public void NonTaskPics()
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        lib.SetActive(false);
+        nonTaskLib.SetActive(true);
+        Init();
+    }
+
+
+    public void DeleteNonTaskPic(int picNum)
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        int targetPic = (page * 4) + picNum;
+
+        if(targetPic > pictures.Count) //it dont exist
+        {
+            return;
+        }
+        Picture target = pictures[targetPic];
+        string targetdir = target.dir;
+
+
+        // check if file exists
+        if (!File.Exists(targetdir))
+        {
+            //file doesnt exist, do nothing
+            return;
+        }
+        else
+        {
+            //file exist, delete and reinitialize the library
+            Debug.Log("deleting " + targetdir);
+            File.Delete(targetdir);
+            StartCoroutine(wait()); //small wait to make sure its deleted before refreshing
+            Init();
+
+#if UNITY_EDITOR
+            UnityEditor.AssetDatabase.Refresh();
+#endif
+        }
+
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(0.5f);
     }
 
 }

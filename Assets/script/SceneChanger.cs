@@ -30,12 +30,14 @@ public class SceneChanger : MonoBehaviour
 
     public void lvl1()
     {
+        FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false; //prevents double loading
         SceneManager.LoadSceneAsync("Lvl1", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("Lvl0");
 
     }
     public void lvl2()
     {
+        FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
         SceneManager.LoadSceneAsync("Lvl0", LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("Lvl1");
 
