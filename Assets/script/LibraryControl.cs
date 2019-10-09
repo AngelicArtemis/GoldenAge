@@ -28,6 +28,74 @@ public class LibraryControl : MonoBehaviour
 
     List<Picture> pictures = new List<Picture>();
 
+    public struct Task
+    {
+        public Texture2D picture;
+        public GameObject taskLib;
+    }
+
+    List<Task> completedTasks = new List<Task>();
+
+    void getCompletedTasks()
+    {
+        foreach(TaskList i in FindObjectOfType<TaskListManager>().completedTasks)
+        {
+            
+        }
+        
+    }
+
+
+
+
+
+
+    public static Texture2D LoadImage(string filename)
+    {
+        byte[] bytes = File.ReadAllBytes(filename);
+
+        Texture2D texture = new Texture2D(Screen.width, Screen.height);
+        texture.LoadImage(bytes);
+
+        return texture;
+    }
+
+    public void openLibs()
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        lib.SetActive(true);
+        taskLib.SetActive(false);
+        nonTaskLib.SetActive(false);
+    }
+    public void DisplayTaskPics()
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        lib.SetActive(false);
+        taskLib.SetActive(true);
+    }
+
+    public void NonTaskPics()
+    {
+        clickSFX.GetComponent<AudioSource>().Play();
+        lib.SetActive(false);
+        nonTaskLib.SetActive(true);
+        Init();
+    }
+    int FindScreenCaptures(string DirectoryPath, string FileName)
+    {
+        int count = 0;
+
+        for (int i = 0; i < Directory.GetFiles(DirectoryPath).Length; i++)
+        {
+            if (Directory.GetFiles(DirectoryPath)[i].Contains(FileName) && Directory.GetFiles(DirectoryPath)[i].EndsWith(".png"))
+            {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+    //NON TASK LIST PART
     public void Init()
     {
         pictures.Clear();
@@ -77,19 +145,7 @@ public class LibraryControl : MonoBehaviour
     }
 
 
-    int FindScreenCaptures(string DirectoryPath, string FileName)
-    {
-        int count = 0;
 
-        for (int i = 0; i < Directory.GetFiles(DirectoryPath).Length; i++)
-        {
-            if (Directory.GetFiles(DirectoryPath)[i].Contains(FileName) && Directory.GetFiles(DirectoryPath)[i].EndsWith(".png"))
-            {
-                count += 1;
-            }
-        }
-        return count;
-    }
 
     public void libDisplay(int page)
     {
@@ -106,37 +162,7 @@ public class LibraryControl : MonoBehaviour
         }
     }
 
-    public static Texture2D LoadImage(string filename)
-    {
-        byte[] bytes = File.ReadAllBytes(filename);
 
-        Texture2D texture = new Texture2D(Screen.width, Screen.height);
-        texture.LoadImage(bytes);
-
-        return texture;
-    }
-
-    public void openLibs()
-    {
-        clickSFX.GetComponent<AudioSource>().Play();
-        lib.SetActive(true);
-        taskLib.SetActive(false);
-        nonTaskLib.SetActive(false);
-    }
-    public void DisplayTaskPics()
-    {
-        clickSFX.GetComponent<AudioSource>().Play();
-        lib.SetActive(false);
-        taskLib.SetActive(true);
-    }
-
-    public void NonTaskPics()
-    {
-        clickSFX.GetComponent<AudioSource>().Play();
-        lib.SetActive(false);
-        nonTaskLib.SetActive(true);
-        Init();
-    }
 
 
     public void DeleteNonTaskPic(int picNum)

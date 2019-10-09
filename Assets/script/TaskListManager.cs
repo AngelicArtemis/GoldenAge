@@ -9,8 +9,7 @@ public class TaskListManager : MonoBehaviour
     public GameObject[] tasks;
     int counter = 0;
     public GameObject complete;
-    List<TaskList> completedKyotoTasks = new List<TaskList>(); 
-    List<TaskList> completedLondonTasks = new List<TaskList>();
+    public List<TaskList> completedTasks = new List<TaskList>(); 
     public int numberOfTaskInKyoto;
     public GameObject clickSFX;
 
@@ -19,10 +18,7 @@ public class TaskListManager : MonoBehaviour
         if(FindObjectOfType<ScreenCaptureManager>().taskListCheck(taskList.taskName))
         {
             taskList.taskCompletion = true;
-            if(SceneManager.GetSceneAt(1).name == "lvl1")
-                addsCompleted(completedKyotoTasks, taskList);
-            if(SceneManager.GetSceneAt(1).name == "lvl2")
-                addsCompleted(completedLondonTasks, taskList);
+            completedTasks.Add(taskList);
         }
         else
         {
@@ -31,31 +27,7 @@ public class TaskListManager : MonoBehaviour
 
     }
 
-    void addsCompleted(List<TaskList> city, TaskList task) //use this for lib display one day lol when there's lib
-    {
-        for(int i=0; i < city.Count; i++)
-        {
-            if(city[i].taskName == task.taskName)
-            {
-                return;
-            }
-        }
-        city.Add(task);
-    }
 
-
-    public string checkTaskPicCity(string picName)
-    {
-        for(int i=0; i < completedKyotoTasks.Count; i++)
-        {
-            if(picName == completedKyotoTasks[i].taskName)
-            {
-                return "kyoto";
-            }
-
-        }
-        return "london";
-    }
 
     bool taskCheckerName(string taskname)
     {
