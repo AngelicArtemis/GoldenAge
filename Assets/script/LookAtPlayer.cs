@@ -9,6 +9,9 @@ public class LookAtPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.transform,player.transform.up);
+        Vector3 targetDir = player.transform.position - this.gameObject.transform.position;
+        targetDir.y = 0;
+        Quaternion rotate = Quaternion.LookRotation(targetDir);
+        transform.rotation = rotate;
     }
 }

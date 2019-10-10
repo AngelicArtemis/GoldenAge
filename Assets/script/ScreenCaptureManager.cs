@@ -90,7 +90,7 @@ public class ScreenCaptureManager : MonoBehaviour
                 cameraMode = true;
                 turniton();
                 timePassed = 0f;
-                FindObjectOfType<ObjectTrigger>().setCameraMode(true);
+                FindObjectOfType<ObjectManager>().setCameraMode(true);
 
             }
             if(Input.GetKey("f") && ingame == true && cameraMode && timePassed >= keyDelay)
@@ -100,7 +100,7 @@ public class ScreenCaptureManager : MonoBehaviour
                 cameraMode = false;
                 turnitoff();
                 timePassed = 0f;
-                FindObjectOfType<ObjectTrigger>().setCameraMode(false);
+                FindObjectOfType<ObjectManager>().setCameraMode(false);
             }
 
         }
@@ -130,7 +130,7 @@ public class ScreenCaptureManager : MonoBehaviour
         StartCoroutine(inGameIconBack());
         StartCoroutine(displayTimer());
         cameraMode = false;
-        FindObjectOfType<ObjectTrigger>().setCameraMode(false);
+        FindObjectOfType<ObjectManager>().setCameraMode(false);
         timePassed = 0f;
     }
     void takePicture()
@@ -204,7 +204,7 @@ public class ScreenCaptureManager : MonoBehaviour
             StartCoroutine(displayTimer());
             cameraMode = false;
             timePassed = 0f;
-            FindObjectOfType<ObjectTrigger>().setCameraMode(false);
+            FindObjectOfType<ObjectManager>().setCameraMode(false);
 
         }
         

@@ -5,14 +5,13 @@ using UnityEngine;
 public class ObjectTrigger : MonoBehaviour
 {
     public bool nearObject;
-    public bool cameraMode;
     bool displaying;
 
     public InteractableObjects oDesc;
 
     void Update()
     {
-        if(cameraMode && nearObject)
+        if(nearObject)
         {
             //send odesc to manager
             //displays object description
@@ -21,7 +20,7 @@ public class ObjectTrigger : MonoBehaviour
         }
         if(displaying)
         {
-            if(!cameraMode || !nearObject)
+            if(!nearObject)
             {
                 //ends display object discreption
                 displaying = false;
@@ -31,13 +30,7 @@ public class ObjectTrigger : MonoBehaviour
         
     }
 
-    public void setCameraMode(bool camera) //call this from screen capture manager 
-    {
-       
-        cameraMode = camera;
-        Debug.Log("camera:" + camera);
 
-    }
 
     private void OnTriggerEnter(Collider other)
     {
