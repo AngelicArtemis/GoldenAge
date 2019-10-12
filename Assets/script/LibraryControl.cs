@@ -32,16 +32,21 @@ public class LibraryControl : MonoBehaviour
     {
         public Texture2D picture;
         public GameObject taskLib;
+        public string name;
     }
 
     List<Task> completedTasks = new List<Task>();
 
     void getCompletedTasks()
     {
-        foreach(TaskList i in FindObjectOfType<TaskListManager>().completedTasks)
+        //Task temp;
+        /*
+         * foreach(TaskList i in FindObjectOfType<TaskListManager>().completedTasks)
         {
-            
+            temp.name = i.taskName;
+            temp.picture = 
         }
+        */
         
     }
 

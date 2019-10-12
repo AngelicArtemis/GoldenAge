@@ -86,21 +86,13 @@ public class ScreenCaptureManager : MonoBehaviour
             if (Input.GetKey("f") && ingame == true && !cameraMode && timePassed >= keyDelay)
             {
                 inGameIcon.SetActive(false);
-                cameraEffect.SetActive(true);
-                cameraMode = true;
-                turniton();
-                timePassed = 0f;
-                FindObjectOfType<ObjectManager>().setCameraMode(true);
-
+                onCameraMode();
             }
             if(Input.GetKey("f") && ingame == true && cameraMode && timePassed >= keyDelay)
             {
-                inGameIcon.SetActive(true);
-                cameraEffect.SetActive(false);
-                cameraMode = false;
-                turnitoff();
+                inGameIcon.SetActive(true); 
+                offCameraMode();
                 timePassed = 0f;
-                FindObjectOfType<ObjectManager>().setCameraMode(false);
             }
 
         }
@@ -108,6 +100,22 @@ public class ScreenCaptureManager : MonoBehaviour
        
     }
 
+    void onCameraMode()
+    {
+        cameraEffect.SetActive(true);
+        cameraMode = true;
+        turniton();
+        timePassed = 0f;
+        FindObjectOfType<ObjectManager>().setCameraMode(true);
+    }
+
+    public void offCameraMode()
+    {
+        cameraEffect.SetActive(false);
+        cameraMode = false;
+        turnitoff();
+        FindObjectOfType<ObjectManager>().setCameraMode(false);
+    }
 
 
     void turnitoff()

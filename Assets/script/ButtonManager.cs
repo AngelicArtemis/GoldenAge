@@ -36,6 +36,8 @@ public class ButtonManager : MonoBehaviour
             buttsize.sizeDelta = new Vector2(Screen.width, Screen.height);
         }
 
+        var iforgot = this.gameObject.transform as RectTransform;
+        iforgot.sizeDelta = new Vector2(Screen.width, Screen.height);
         float screenheight, screenwidth;
         screenheight = Screen.height;
         screenwidth = Screen.width;
@@ -60,8 +62,9 @@ public class ButtonManager : MonoBehaviour
         //print(timePassed);
         if (Input.GetKey("escape") && inGame && timePassed >= keyDelay) 
         {
-            if (!inMenu)
+            if (!inMenu) 
             {
+                //FindObjectOfType<ScreenCaptureManager>().offCameraMode();
                 FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
                 StartCoroutine(enableCursor());
                 inGameMenu.SetActive(true);
