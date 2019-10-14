@@ -12,29 +12,15 @@ public class LoadingScreen : MonoBehaviour
 
     IEnumerator loadingNewScene(string scene, string unScene)
     {
-        //yield return null;
-        //yield return SceneManager.LoadSceneAsync(scene,LoadSceneMode.Additive);
 
         AsyncOperation ao = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-        yield return StartCoroutine(loadingThings());
-        //ao.allowSceneActivation = false;
 
         while (!ao.isDone)
         {
+            yield return StartCoroutine(loadingThings());
             // [0, 0.9] > [0, 1]
             float progress = Mathf.Clamp01(ao.progress / 0.9f);
             Debug.Log("ao.progress" + ao.progress); //this only shows 0 and 0.9??? wtf???hello??? wheres the number in between???
-            //int page = (int)((progress*100)/12.5);
-            //Debug.Log("page" + page);
-            //loadPage(page);
-            // Loading completed
-            /*
-            if (ao.progress == 0.9f)
-            {
-                ao.allowSceneActivation = true;
-               
-            }*/
-            //yield return StartCoroutine(loadingThings());
         }
         SceneManager.UnloadSceneAsync(unScene);
         doneLoading();

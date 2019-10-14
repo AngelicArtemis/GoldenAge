@@ -19,6 +19,14 @@ public class LibraryControl : MonoBehaviour
     int totalPics;
 
     public GameObject[] libPics = new GameObject[4]; //4 is the number of pics to display per screen
+    int taskNum = 0;
+    public GameObject marketLib;
+    public GameObject toriLib;
+    public GameObject towerLib;
+    public GameObject cinemaLib;
+    public GameObject kinkakujiLib;
+    public GameObject stationLib;
+
 
     public struct Picture
     {
@@ -37,23 +45,100 @@ public class LibraryControl : MonoBehaviour
 
     List<Task> completedTasks = new List<Task>();
 
-    void getCompletedTasks()
+    public void addCompletedTasks(string taskName)
     {
-        //Task temp;
-        /*
-         * foreach(TaskList i in FindObjectOfType<TaskListManager>().completedTasks)
+        Task tempo = new Task();
+        for (int i = 0; i < Directory.GetFiles(ScreenCapDirectory).Length; i++) 
         {
-            temp.name = i.taskName;
-            temp.picture = 
+            if (Directory.GetFiles(ScreenCapDirectory)[i].Contains(taskName) && Directory.GetFiles(ScreenCapDirectory)[i].EndsWith(".png"))
+            {
+                tempo.picture = LoadImage(Directory.GetFiles(ScreenCapDirectory)[i]);
+            }
         }
-        */
-        
+        if(tempo.picture == null)
+        {
+            return;
+        }
+        tempo.name = taskName;
+        tempo.taskLib = matchObjectToName(taskName);
+        tempo.taskLib.GetComponentInChildren<RawImage>().texture = tempo.picture;
+        completedTasks.Add(tempo);
     }
 
+    void fillCompletedTask()
+    {
+        addCompletedTasks("tori");
+        addCompletedTasks("market");
+        addCompletedTasks("station");
+        addCompletedTasks("tower");
+        addCompletedTasks("cinema");
+        addCompletedTasks("kinkakuji");
+    }
 
+    public void displayTaskLibPage()
+    {
+        if(completedTasks.Count > taskNum)
+            completedTasks[taskNum].taskLib.SetActive(true);
 
+    }
 
+    public void nextTaskLibPage()
+    {
 
+        clickSFX.GetComponent<AudioSource>().Play();
+        int prev = taskNum;
+        taskNum += 1;
+        if (taskNum >= completedTasks.Count)
+            taskNum = 0;
+
+        displayTaskLibPage();
+        completedTasks[prev].taskLib.SetActive(false);
+    }
+
+    public void prevTaskLibPage()
+    {
+
+        clickSFX.GetComponent<AudioSource>().Play();
+        int prev = taskNum;
+        taskNum -= 1;
+        if (taskNum < 0)
+            taskNum = completedTasks.Count - 1;
+
+        displayTaskLibPage();
+        completedTasks[prev].taskLib.SetActive(false);
+    }
+
+    GameObject matchObjectToName(string taskname) //maybe put a loop and put the word in an array to loop through...eh we're still in testing
+    {
+        if (taskname.ToLower().Contains("tori"))
+        {
+            return toriLib;
+        }
+        else if (taskname.ToLower().Contains("market"))
+        {
+            return marketLib;
+        }
+        else if (taskname.ToLower().Contains("tower"))
+        {
+            return towerLib;
+        }
+        else if (taskname.ToLower().Contains("kinkakuji"))
+        {
+            return kinkakujiLib;
+        }
+        else if (taskname.ToLower().Contains("station"))
+        {
+            return stationLib;
+        }
+        else if (taskname.ToLower().Contains("cinema"))
+        {
+            return cinemaLib;
+        }
+        else
+        {
+            return null;
+        }
+    }
 
     public static Texture2D LoadImage(string filename)
     {
@@ -77,6 +162,8 @@ public class LibraryControl : MonoBehaviour
         clickSFX.GetComponent<AudioSource>().Play();
         lib.SetActive(false);
         taskLib.SetActive(true);
+        fillCompletedTask();
+        displayTaskLibPage();
     }
 
     public void NonTaskPics()

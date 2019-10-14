@@ -12,13 +12,19 @@ public class photoCollider : MonoBehaviour
     //public GameObject photo;
     TaskList tasklist = new TaskList();
     public bool taskPic;
-    GameObject player;
+    public GameObject player;
     Vector3 facingDir;
     GameObject directionOfPhoto;
 
     // Use this for initialization
     void Start()
     {
+        init();
+    }
+
+    private void init()
+    {
+        tasklist.taskName = "";
         Debug.Log(gameObject.name);
         setTaskName();
         FindObjectOfType<TaskListManager>().taskChecker(tasklist);
@@ -29,12 +35,11 @@ public class photoCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkLooking();
-
         if(playerClose)// && playerClose == true)// && !tasklist.taskCompletion)
         {
-
-            FindObjectOfType<TaskListManager>().taskChecker(tasklist);
+            init();
+            checkLooking();
+            //FindObjectOfType<TaskListManager>().taskChecker(tasklist);
             if (playerLookingAtCollider)
             {
                 if(!tasklist.taskCompletion)
@@ -80,9 +85,9 @@ public class photoCollider : MonoBehaviour
         {
             tasklist.taskName = "kinkakuji";
         }
-        else if (gameObject.name.ToLower().Contains("news"))
+        else if (gameObject.name.ToLower().Contains("station"))
         {
-            tasklist.taskName = "news";
+            tasklist.taskName = "station";
         }
         else if (gameObject.name.ToLower().Contains("cinema"))
         {
@@ -101,12 +106,6 @@ public class photoCollider : MonoBehaviour
             playerClose = true;
             Debug.Log("playerClose = true");
         }
-        /*
-        if(collider.gameObject.name == "playerTouch")
-        {
-            playerLookingAtCollider = true;
-            Debug.Log("playerLookingAtCollider = true");
-        }*/
     }
 
     void OnTriggerExit(Collider collider)
@@ -116,12 +115,6 @@ public class photoCollider : MonoBehaviour
             playerClose = false;
             Debug.Log("playerClose = false");
         }
-        /*
-        if (collider.gameObject.name == "playerTouch")
-        {
-            playerLookingAtCollider = false;
-            Debug.Log("playerLookingAtCollider = false");
-        }*/
     }
 
     void checkLooking()

@@ -19,6 +19,7 @@ public class TaskListManager : MonoBehaviour
         {
             taskList.taskCompletion = true;
             completedTasks.Add(taskList);
+            //FindObjectOfType<LibraryControl>().addCompletedTasks(taskList.taskName);
         }
         else
         {
