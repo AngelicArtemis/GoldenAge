@@ -29,16 +29,17 @@ public class photoCollider : MonoBehaviour
         setTaskName();
         FindObjectOfType<TaskListManager>().taskChecker(tasklist);
         player = FindObjectOfType<CharacterController>().gameObject;
-        directionOfPhoto = transform.GetChild(0).gameObject;
+        //directionOfPhoto = transform.GetChild(0).GetComponent<Collider>().gameObject;
+        directionOfPhoto = gameObject.GetComponentInChildren<Collider>().gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        checkLooking();
         if(playerClose)// && playerClose == true)// && !tasklist.taskCompletion)
         {
             init();
-            checkLooking();
             //FindObjectOfType<TaskListManager>().taskChecker(tasklist);
             if (playerLookingAtCollider)
             {
@@ -104,7 +105,7 @@ public class photoCollider : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             playerClose = true;
-            Debug.Log("playerClose = true");
+            //Debug.Log("playerClose = true");
         }
     }
 
@@ -113,7 +114,7 @@ public class photoCollider : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             playerClose = false;
-            Debug.Log("playerClose = false");
+            //Debug.Log("playerClose = false");
         }
     }
 
@@ -121,13 +122,13 @@ public class photoCollider : MonoBehaviour
     {
         facingDir = player.transform.forward;
         RaycastHit hit;
-        
+        //Debug.Log("raycast?");
         if (Physics.Raycast(player.transform.position,facingDir , out hit))
         {
             //Debug.Log(hit.transform.gameObject.name); //returns the name of the object the ray hit
             if (hit.transform.gameObject== directionOfPhoto)
             {
-                Debug.Log("you hit the goal!!!");
+                //Debug.Log("you hit the goal!!!");
                 playerLookingAtCollider = true;
             }
         }
