@@ -60,11 +60,11 @@ public class ButtonManager : MonoBehaviour
 
         timePassed += Time.deltaTime;
         //print(timePassed);
-        if (Input.GetKey("escape") && inGame && timePassed >= keyDelay) 
+        if (Input.GetKeyDown("escape") && inGame && timePassed >= keyDelay) 
         {
             if (!inMenu) 
             {
-                //FindObjectOfType<ScreenCaptureManager>().offCameraMode();
+                FindObjectOfType<ScreenCaptureManager>().offCameraMode();
                 FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
                 StartCoroutine(enableCursor());
                 inGameMenu.SetActive(true);
