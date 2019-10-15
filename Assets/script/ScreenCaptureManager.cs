@@ -16,6 +16,8 @@ public class ScreenCaptureManager : MonoBehaviour
 
 
 
+
+
     //a list of ui objects to show which task is completed at display last picture taken
     public GameObject toriTask;
     public GameObject marketTask;
@@ -23,7 +25,8 @@ public class ScreenCaptureManager : MonoBehaviour
     public GameObject towerTask;
     public GameObject cinemaTask;
     public GameObject kinkakujiTask;
-
+    float pictureTimer = 2.01f;
+    float picTime = 0f;
     private float keyDelay = 0.2f; //so you dont spam stuff omg
     private float timePassed = 0f;
     public bool taskPic;
@@ -63,7 +66,7 @@ public class ScreenCaptureManager : MonoBehaviour
 
     void Update()
     {
-
+        picTime += Time.deltaTime;
         timePassed += Time.deltaTime;
         if (Input.GetMouseButton(1) && cameraMode == true && timePassed >= keyDelay)
         {
@@ -132,14 +135,18 @@ public class ScreenCaptureManager : MonoBehaviour
 
     void nonTaskListPictures()
     {
-        turnitoff();
-        cameraEffect.SetActive(false);
-        takePicture();
-        StartCoroutine(inGameIconBack());
-        StartCoroutine(displayTimer());
-        cameraMode = false;
-        FindObjectOfType<ObjectManager>().setCameraMode(false);
-        timePassed = 0f;
+        if (picTime >= pictureTimer)
+        {
+            turnitoff();
+            cameraEffect.SetActive(false);
+            takePicture();
+            StartCoroutine(inGameIconBack());
+            StartCoroutine(displayTimer());
+            cameraMode = false;
+            FindObjectOfType<ObjectManager>().setCameraMode(false);
+            picTime = 0f;
+        }
+        
     }
     void takePicture()
     {
@@ -170,7 +177,7 @@ public class ScreenCaptureManager : MonoBehaviour
 
     public void taskListPicture(string placeName)
     {
-        if (cameraMode == true && timePassed >= keyDelay)
+        if (cameraMode == true && picTime >= pictureTimer)
         {
             turnitoff();
 
@@ -211,7 +218,7 @@ public class ScreenCaptureManager : MonoBehaviour
             StartCoroutine(inGameIconBack());
             StartCoroutine(displayTimer());
             cameraMode = false;
-            timePassed = 0f;
+            picTime = 0f;
             FindObjectOfType<ObjectManager>().setCameraMode(false);
 
         }
