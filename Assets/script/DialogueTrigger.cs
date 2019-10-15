@@ -47,12 +47,13 @@ public class DialogueTrigger : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             playerClose = true;
-            Debug.Log("playerClose = true");
+            Debug.Log("playerClose = true HEWWWWWWWWOOOOOOOOOOOOOOOO");
         }
         if (collider.gameObject.name == "playerTouch")
         {
             playerLookingAtCollider = true;
-            Debug.Log("playerLookingAtCollider = true");
+            Debug.Log("playerLookingAtCollider = true HELLO ARE YOU WORKING");
+
         }
     }
 
