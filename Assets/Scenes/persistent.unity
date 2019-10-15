@@ -55,9 +55,9 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
-    m_Resolution: 2
-    m_BakeResolution: 40
-    m_AtlasSize: 1024
+    m_Resolution: 1
+    m_BakeResolution: 20
+    m_AtlasSize: 64
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -8359,10 +8359,10 @@ MonoBehaviour:
   inMenu: 0
   toriTask: {fileID: 528892300}
   marketTask: {fileID: 1733890327}
-  newsTask: {fileID: 0}
-  towerTask: {fileID: 0}
-  cinemaTask: {fileID: 0}
-  kinkakujiTask: {fileID: 0}
+  newsTask: {fileID: 1471822006}
+  towerTask: {fileID: 1939039359}
+  cinemaTask: {fileID: 233797387}
+  kinkakujiTask: {fileID: 1781654161}
   taskPic: 0
   taskPicName: 
   pictureTaken: {fileID: 1996133805}
