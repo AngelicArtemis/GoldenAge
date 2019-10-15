@@ -165,6 +165,12 @@ public class ScreenCaptureManager : MonoBehaviour
     public IEnumerator displayTimer()
     {
         yield return new WaitForSeconds(2);
+        toriTask.SetActive(false);
+        marketTask.SetActive(false);
+        newsTask.SetActive(false);
+        towerTask.SetActive(false);
+        cinemaTask.SetActive(false);
+        kinkakujiTask.SetActive(false);
         taskComplete.SetActive(false);
         pictureTaken.SetActive(false);
     }
