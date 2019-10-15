@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1648114, g: 0.34344876, b: 0.4743863, a: 1}
+  m_IndirectSpecularColor: {r: 0.13049199, g: 0.09310198, b: 0.23291773, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25948,9 +25948,10 @@ MonoBehaviour:
     - Hi there. Welcome to our travel angency. Are you ready for your time travel?
     - According to your requriement, we designed your trip that goes through different
       places at different periods.
-    - The first destination would be Kyoto in 2010s.
-    - 'The camera function already activated. You can always wink your right eye (right
-      click) to take photos. '
+    - The first destination would be Kyoto in 2010s. Always check your tasklist and
+      map when you are lost.
+    - 'The camera function is already activated. You can always wink your right eye
+      (right click) to take photos while in the camera mood (press "F"). '
     - Not only for your assignment tho, as long as you are happy with that.
     - If you forget anything, I am always here to help (press ESC).
     - Before you leave, would you like to take a photo of me?
@@ -26868,6 +26869,10 @@ PrefabInstance:
       value: FPSController
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_FootstepSounds.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_JumpSpeed
       value: 5
       objectReference: {fileID: 0}
@@ -26879,6 +26884,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1193982011}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_JumpSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_LandSound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
