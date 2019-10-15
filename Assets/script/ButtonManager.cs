@@ -195,6 +195,12 @@ public class ButtonManager : MonoBehaviour
     {
         clickSFX.GetComponent<AudioSource>().Play();
         //opens map
+        UIpages[4].SetActive(true);
+    }
+
+    public void closeMap()
+    {
+        UIpages[4].SetActive(false);
     }
 
     public void taskList()
