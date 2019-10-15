@@ -29,7 +29,7 @@ public class photoCollider : MonoBehaviour
         setTaskName();
         FindObjectOfType<TaskListManager>().taskChecker(tasklist);
         player = FindObjectOfType<CharacterController>().gameObject;
-        directionOfPhoto = gameObject.GetComponentInChildren<Collider>().gameObject;
+        directionOfPhoto = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
