@@ -25,7 +25,6 @@ public class FireworksDelay : MonoBehaviour
                 firework.Play();
                 var emmision = firework.emission;
                 emmision.enabled = true;
-                Debug.Log(firework.isPlaying);
                 timer = 0;
             }
         }

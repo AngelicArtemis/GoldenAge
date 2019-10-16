@@ -8,31 +8,14 @@ public class MouseOverUIButtons : MonoBehaviour, IPointerEnterHandler, IPointerE
 {
     public GameObject buttonStuff;
 
-    /*
-    public void OnMouseOver()
-    {
-        Debug.Log("Here");
-        buttonStuff.SetActive(true);
-    }
-
-    public void OnMouseExit()
-    {
-        Debug.Log("Mouse exit");
-        buttonStuff.SetActive(false);
-    }
-    */
-
-
     
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Here"); 
         buttonStuff.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Mouse exit");
         buttonStuff.SetActive(false);
     }
 

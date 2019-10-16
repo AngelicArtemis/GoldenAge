@@ -12,9 +12,9 @@ public class photoCollider : MonoBehaviour
     //public GameObject photo;
     TaskList tasklist = new TaskList();
     public bool taskPic;
-    public GameObject player;
+    GameObject player;
     Vector3 facingDir;
-    GameObject directionOfPhoto;
+    public GameObject directionOfPhoto;
 
     // Use this for initialization
     void Start()
@@ -30,7 +30,7 @@ public class photoCollider : MonoBehaviour
         FindObjectOfType<TaskListManager>().taskChecker(tasklist);
         player = FindObjectOfType<CharacterController>().gameObject;
         //directionOfPhoto = transform.GetChild(0).GetComponent<Collider>().gameObject;
-        directionOfPhoto = gameObject.GetComponentInChildren<Collider>().gameObject;
+        //directionOfPhoto = gameObject.GetComponentInChildren<Collider>().gameObject;
     }
 
     // Update is called once per frame

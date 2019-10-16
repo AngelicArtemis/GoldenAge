@@ -15,9 +15,6 @@ public class ScreenCaptureManager : MonoBehaviour
     public bool inMenu = false;
 
 
-
-
-
     //a list of ui objects to show which task is completed at display last picture taken
     public GameObject toriTask;
     public GameObject marketTask;
@@ -27,6 +24,8 @@ public class ScreenCaptureManager : MonoBehaviour
     public GameObject kinkakujiTask;
     float pictureTimer = 2.01f;
     float picTime = 0f;
+
+
     private float keyDelay = 0.2f; //so you dont spam stuff omg
     private float timePassed = 0f;
     public bool taskPic;
@@ -154,6 +153,7 @@ public class ScreenCaptureManager : MonoBehaviour
         //ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + (ScreenCaps + 1) + fileType);
         ScreenCapture.CaptureScreenshot(ScreenCapDirectory + ScreenCapName + " " + datetime + fileType);
 
+        FindObjectOfType<CameraShutter>().startAni();
         Debug.Log("ScreenCapture Taken!");
         Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
         lastPicture = ScreenCapName + " " + datetime + fileType;
@@ -189,6 +189,8 @@ public class ScreenCaptureManager : MonoBehaviour
 
             cameraEffect.SetActive(false);
             ScreenCapture.CaptureScreenshot(ScreenCapDirectory + placeName  + fileType);
+
+            FindObjectOfType<CameraShutter>().startAni();
             Debug.Log("Task list ScreenCapture Taken!");
             Debug.Log("ScreenCap Location: " + ScreenCapDirectory);
             lastPicture = placeName + fileType;

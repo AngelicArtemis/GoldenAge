@@ -16226,7 +16226,7 @@ MonoBehaviour:
   playerClose: 0
   playerLookingAtCollider: 0
   taskPic: 0
-  player: {fileID: 0}
+  directionOfPhoto: {fileID: 1428165415}
 --- !u!135 &186168641
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -49305,7 +49305,7 @@ MonoBehaviour:
   playerClose: 0
   playerLookingAtCollider: 0
   taskPic: 0
-  player: {fileID: 0}
+  directionOfPhoto: {fileID: 1109221459}
 --- !u!114 &920755877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91608,7 +91608,7 @@ MonoBehaviour:
   playerClose: 0
   playerLookingAtCollider: 0
   taskPic: 0
-  player: {fileID: 0}
+  directionOfPhoto: {fileID: 270354982}
 --- !u!135 &1378531929
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -113252,7 +113252,7 @@ MonoBehaviour:
   playerClose: 0
   playerLookingAtCollider: 0
   taskPic: 0
-  player: {fileID: 0}
+  directionOfPhoto: {fileID: 1824025213}
 --- !u!135 &1698625029
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -123369,6 +123369,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mat: {fileID: 2100000, guid: 9bada6644f522a44493ac1d53709fba7, type: 2}
+--- !u!114 &2106761356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106761354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f772ca176abe0834ab80b9cf47ae997a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2106761357
 MonoBehaviour:
   m_ObjectHideFlags: 0
