@@ -7,30 +7,29 @@ using UnityEngine.PostProcessing;
 public class FocusChanging : MonoBehaviour
 {
 
-    PostProcessingProfile ppProfile;
-    // Start is called before the first frame update
-    void Start()
-    {
-        ppProfile = gameObject.GetComponent<PostProcessingProfile>();
-        Debug.Log(ppProfile);
-    }
+    public PostProcessingProfile ppProfile;
 
-    // Update is called once per frame
-    void Update()
+
+    IEnumerator changes()
     {
-        if(Input.GetKeyDown("o"))
+        for (int i = 1; i <= 21; i += 5)
         {
-            changeFocus();
-            Debug.Log("pressed o");
+            yield return new WaitForSeconds(0.23f);
+            ppProfile.depthOfField.enabled = true;
+            DepthOfFieldModel.Settings newSettings = ppProfile.depthOfField.settings;
+            newSettings.focusDistance = i;
+            //Debug.Log("focus: " + i);
+            ppProfile.depthOfField.settings = newSettings;
+            if(i == 21)
+            {
+                ppProfile.depthOfField.enabled = false;
+            }
         }
     }
 
     public void changeFocus()
     {
-        ppProfile.depthOfField.enabled = true;
-        DepthOfFieldModel.Settings newSettings = ppProfile.depthOfField.settings;
-        newSettings.focusDistance = 1f;
-        ppProfile.depthOfField.settings = newSettings;
+        StartCoroutine(changes());
     }
 
 

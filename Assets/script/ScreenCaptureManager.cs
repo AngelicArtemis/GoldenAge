@@ -105,6 +105,7 @@ public class ScreenCaptureManager : MonoBehaviour
     void onCameraMode()
     {
         cameraEffect.SetActive(true);
+        FindObjectOfType<FocusChanging>().changeFocus();
         cameraMode = true;
         turniton();
         timePassed = 0f;

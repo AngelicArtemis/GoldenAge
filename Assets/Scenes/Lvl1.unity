@@ -123381,6 +123381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f772ca176abe0834ab80b9cf47ae997a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ppProfile: {fileID: 11400000, guid: 07ff9cb30dd78944f87cac834aca7a7a, type: 2}
 --- !u!114 &2106761357
 MonoBehaviour:
   m_ObjectHideFlags: 0
