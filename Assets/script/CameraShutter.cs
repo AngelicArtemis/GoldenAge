@@ -25,14 +25,14 @@ public class CameraShutter : MonoBehaviour
         for (int i = 1; i < shutters.Length; i++)
         {
             //yield return new WaitForEndOfFrame();
-            yield return new WaitForSeconds(0.01f); //testing purposes
+            yield return new WaitForSeconds(0.02f); //testing purposes
             shutters[i].SetActive(true);
             shutters[i - 1].SetActive(false);
-            if(i == 12)
+            if(i == 13)
             {
                 //yield return new WaitForEndOfFrame();
-                yield return new WaitForSeconds(0.01f); //testing purposes
-                shutters[12].SetActive(false);
+                yield return new WaitForSeconds(0.02f); //testing purposes
+                shutters[13].SetActive(false);
             }
         }
         

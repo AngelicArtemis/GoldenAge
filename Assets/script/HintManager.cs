@@ -4,6 +4,43 @@ using UnityEngine;
 
 public class HintManager : MonoBehaviour
 {
+
+    public GameObject target;
+    public GameObject player;
+    Vector3 playerFacing;
+    Vector3 rightDir;
+    public GameObject leftGlow, rightGlow;
+
+
+    private void Start()
+    {
+        rightDir = target.transform.position - player.transform.position;
+    }
+
+    private void Update()
+    {
+        playerFacing = player.transform.forward;
+
+        float angle = Vector3.SignedAngle(rightDir, playerFacing, Vector3.up);
+
+        Debug.Log(angle);
+        if (angle > 20.0F)
+        {
+            leftGlow.SetActive(true);
+            rightGlow.SetActive(false);
+            Debug.Log("look left");
+        }
+        else if (angle < -20.0F)
+        {
+            rightGlow.SetActive(true);
+            leftGlow.SetActive(false);
+            Debug.Log("look right");
+        }
+    }
+
+    
+
+
     //chuck this into the collider game object.
     //complayer playerTouch to collider position
 
