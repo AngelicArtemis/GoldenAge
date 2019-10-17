@@ -43,12 +43,10 @@ public class ScreenCaptureManager : MonoBehaviour
 
     //Private variables to get how many screenshots exist
     private int count;
-    private int ScreenCaps;
 
     void Start()
     {   
         count = 0;
-        ScreenCaps = 0;
         //ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
         //ScreenCapDirectory = Application.persistentDataPath;
         //ScreenCapDirectory = Path.Combine( ScreenCapDirectory,"cameraSS\\");
