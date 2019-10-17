@@ -15,7 +15,10 @@ public class DialogueTrigger : MonoBehaviour
 
     void Update()
     {
-
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             IsThisTyping();
