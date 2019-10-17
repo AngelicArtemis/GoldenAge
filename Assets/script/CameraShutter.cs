@@ -9,11 +9,16 @@ public class CameraShutter : MonoBehaviour
 
     public void startAni()
     {
-        shutters[0].SetActive(true);
-        StartCoroutine(shutter());
+        StartCoroutine(wait());
         shutters[12].SetActive(false);
     }
 
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(0.1f);
+        shutters[0].SetActive(true);
+        StartCoroutine(shutter());
+    }
 
     IEnumerator shutter()
     {
