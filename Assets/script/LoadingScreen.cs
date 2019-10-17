@@ -7,7 +7,6 @@ public class LoadingScreen : MonoBehaviour
 {
     public GameObject[] loadingPages;
     public GameObject loading;
-    bool isLoading = true;
 
 
     IEnumerator loadingNewScene(string scene, string unScene)
@@ -51,7 +50,6 @@ public class LoadingScreen : MonoBehaviour
 
     public void load(string scene, string unScene)
     {
-        isLoading = true;
         loading.SetActive(true);
         var resizing = loading.transform as RectTransform;
         //var resizing = loading.GetComponent<RectTransform>();
