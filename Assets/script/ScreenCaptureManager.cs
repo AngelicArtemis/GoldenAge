@@ -260,7 +260,7 @@ public class ScreenCaptureManager : MonoBehaviour
     //Texture2D myTexture;
     public IEnumerator displayLastPicture()
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.7f);
         pictureTaken.SetActive(true);
         pictureTaken.GetComponentInChildren<RawImage>().texture = LoadImage(ScreenCapDirectory + lastPicture);
     }
