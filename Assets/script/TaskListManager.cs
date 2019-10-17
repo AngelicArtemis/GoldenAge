@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 public class TaskListManager : MonoBehaviour
 {
     public GameObject[] tasks;
-    int counter = 0;
+    static int counter = 0;
     public GameObject complete;
     public List<TaskList> completedTasks = new List<TaskList>(); 
     public int numberOfTaskInKyoto;
     public GameObject clickSFX;
+
 
     public void taskChecker(TaskList taskList)
     {
@@ -41,6 +42,8 @@ public class TaskListManager : MonoBehaviour
 
     public void displayTasks()
     {
+        Debug.Log("counter" + counter);
+
         tasks[counter].SetActive(true);
         if(taskCheckerName(tasks[counter].name))
         {
@@ -57,7 +60,7 @@ public class TaskListManager : MonoBehaviour
 
         clickSFX.GetComponent<AudioSource>().Play();
         counter += 1;
-        if (counter >= tasks.Length)
+        if (counter >= 6 )
         {
             counter = 0;
             tasks[tasks.Length - 1].SetActive(false);
