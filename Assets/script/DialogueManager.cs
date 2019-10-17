@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     public Queue<string> sentences;
     public GameObject dialogBox;
     public bool endChat;
-
+    public bool typing;
 
     private void Start()
     {
@@ -41,6 +41,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        typing = true;
+        Debug.Log("typing");
         dialogBox.SetActive(true);
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
@@ -54,6 +56,7 @@ public class DialogueManager : MonoBehaviour
             dialogBox.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text += letter;
             yield return new WaitForSeconds(0.02f);
         }
+        typing = false;
     }
 
     void endDialogue()
