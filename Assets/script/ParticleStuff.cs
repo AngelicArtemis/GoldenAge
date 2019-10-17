@@ -17,7 +17,7 @@ public class ParticleStuff : MonoBehaviour
 
     private void Update()
     {
-        position = fpc.transform.position;
+        position = fpc.transform.position + (fpc.transform.forward * 3);
     }
     void OnTriggerEnter(Collider coll)
     {

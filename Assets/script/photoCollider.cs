@@ -25,7 +25,7 @@ public class photoCollider : MonoBehaviour
     private void init()
     {
         tasklist.taskName = "";
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
         setTaskName();
         FindObjectOfType<TaskListManager>().taskChecker(tasklist);
         player = FindObjectOfType<CharacterController>().gameObject;
@@ -36,10 +36,9 @@ public class photoCollider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkLooking();
         if(playerClose)// && playerClose == true)// && !tasklist.taskCompletion)
         {
-            init();
+            checkLooking();
             //FindObjectOfType<TaskListManager>().taskChecker(tasklist);
             if (playerLookingAtCollider)
             {
@@ -58,11 +57,7 @@ public class photoCollider : MonoBehaviour
                 }
                 
             }
-            if (!playerClose)
-            {
-                Debug.Log("this is false2");
-                FindObjectOfType<ScreenCaptureManager>().taskPic = false;
-            }
+
         }
 
 
@@ -107,6 +102,7 @@ public class photoCollider : MonoBehaviour
             playerClose = true;
             //Debug.Log("playerClose = true");
         }
+        init();
     }
 
     void OnTriggerExit(Collider collider)
@@ -122,19 +118,21 @@ public class photoCollider : MonoBehaviour
     {
         facingDir = player.transform.forward;
         RaycastHit hit;
+        //Debug.DrawRay(player.transform.position, facingDir, Color.green);
         //Debug.Log("raycast?");
-        if (Physics.Raycast(player.transform.position,facingDir , out hit))
+        if (Physics.Raycast(player.transform.position,facingDir , out hit, 100f))
         {
-            //Debug.Log(hit.transform.gameObject.name); //returns the name of the object the ray hit
-            if (hit.transform.gameObject== directionOfPhoto)
+            Debug.Log(hit.transform.gameObject.name); //returns the name of the object the ray hit
+            if (hit.transform.gameObject == directionOfPhoto)
             {
-                //Debug.Log("you hit the goal!!!");
+                Debug.Log("you hit the goal!!!");
                 playerLookingAtCollider = true;
             }
+            else
+            {
+                playerLookingAtCollider = false;
+            }
         }
-        else
-        {
-            playerLookingAtCollider = false;
-        }
+        
     }
 }

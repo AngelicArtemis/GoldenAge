@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.13049199, g: 0.09310198, b: 0.23291773, a: 1}
+  m_IndirectSpecularColor: {r: 0.07307557, g: 0.041470915, b: 0.19970384, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -38614,6 +38614,11 @@ PrefabInstance:
       propertyPath: Priority
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7036922821009533177, guid: adf63f621b15a4b4395c55d64fc56fbc,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1385722049053244339, guid: adf63f621b15a4b4395c55d64fc56fbc, type: 3}
     - {fileID: 5107037151368386881, guid: adf63f621b15a4b4395c55d64fc56fbc, type: 3}
@@ -75809,7 +75814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109221459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.24, z: -7.41}
+  m_LocalPosition: {x: 0.8100014, y: 0.28, z: -4.51}
   m_LocalScale: {x: 1.9770901, y: 1.9770901, z: 1.9770901}
   m_Children: []
   m_Father: {fileID: 920755875}
@@ -97312,7 +97317,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428165415}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -100025,10 +100030,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.4879303
+  m_Radius: 0.88545024
   m_Height: 2.9758606
   m_Direction: 1
-  m_Center: {x: 0.9879303, y: 0, z: 0}
+  m_Center: {x: 0.9879298, y: 0, z: -0.60248005}
 --- !u!4 &1501483152
 Transform:
   m_ObjectHideFlags: 0

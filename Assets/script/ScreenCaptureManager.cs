@@ -44,6 +44,9 @@ public class ScreenCaptureManager : MonoBehaviour
     //Private variables to get how many screenshots exist
     private int count;
 
+    public GameObject[] goodpics;
+    public GameObject[] badpics;
+
     void Start()
     {   
         count = 0;
@@ -163,7 +166,8 @@ public class ScreenCaptureManager : MonoBehaviour
 
     public IEnumerator displayTimer()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
+        removeText();
         toriTask.SetActive(false);
         marketTask.SetActive(false);
         newsTask.SetActive(false);
@@ -173,6 +177,7 @@ public class ScreenCaptureManager : MonoBehaviour
         taskComplete.SetActive(false);
         pictureTaken.SetActive(false);
     }
+
     public IEnumerator inGameIconBack()
     {
         yield return new WaitForSeconds(0.5f);
@@ -262,6 +267,14 @@ public class ScreenCaptureManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);
         pictureTaken.SetActive(true);
+        if(lastPicture.Contains(ScreenCapName))
+        {
+            itsbad();
+        }
+        else
+        {
+            itsgood();
+        }
         pictureTaken.GetComponentInChildren<RawImage>().texture = LoadImage(ScreenCapDirectory + lastPicture);
     }
 
@@ -275,6 +288,29 @@ public class ScreenCaptureManager : MonoBehaviour
         return texture;
     }
 
+    int ranTextInt;
 
+    void itsgood()
+    {
+        ranTextInt = Random.Range(0, goodpics.Length);
+        goodpics[ranTextInt].SetActive(true);
+    }
+        
+    void removeText()
+    {
+        if (lastPicture.Contains(ScreenCapName))
+        {
+            badpics[ranTextInt].SetActive(false);
+        }
+        else
+        {
+            goodpics[ranTextInt].SetActive(false);
+        }
 
+    }
+    void itsbad()
+    {
+        ranTextInt = Random.Range(0, badpics.Length);
+        badpics[ranTextInt].SetActive(true);
+    }
 }
