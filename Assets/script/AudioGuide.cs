@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class AudioGuide : MonoBehaviour
 {
-    bool played = false;
-
-    private void OnCollisionEnter(Collision collision)
+    public GameObject[] guides;
+    public void playThis(int num)
     {
-        if(!played)
-        {
-            gameObject.GetComponent<AudioSource>().Play();
-            played = true;
-        }
+        /*
+         * 0 = tori
+         * 1 = kinkakuji
+         * 2 = tower
+         * 3 = station
+         * 4 = market
+         */
+        guides[num].GetComponent<AudioSource>().Play();
     }
 
 }
