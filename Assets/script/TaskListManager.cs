@@ -12,6 +12,7 @@ public class TaskListManager : MonoBehaviour
     public List<TaskList> completedTasks = new List<TaskList>(); 
     public int numberOfTaskInKyoto;
     public GameObject clickSFX;
+    public GameObject portal;
 
 
     public void taskChecker(TaskList taskList)
@@ -21,12 +22,22 @@ public class TaskListManager : MonoBehaviour
             taskList.taskCompletion = true;
             completedTasks.Add(taskList);
             //FindObjectOfType<LibraryControl>().addCompletedTasks(taskList.taskName);
+            if(completedTasks.Count >= 4)
+            {
+                Debug.Log("hewwo");
+                //openPortal();
+            }
         }
         else
         {
             taskList.taskCompletion = false;
         }
 
+    }
+
+    void openPortal()
+    {
+        portal.SetActive(true);
     }
 
 

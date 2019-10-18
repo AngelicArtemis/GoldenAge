@@ -50,10 +50,10 @@ public class ScreenCaptureManager : MonoBehaviour
     void Start()
     {   
         count = 0;
-        //ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
+        ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
         //ScreenCapDirectory = Application.persistentDataPath;
         //ScreenCapDirectory = Path.Combine( ScreenCapDirectory,"cameraSS\\");
-        ScreenCapDirectory = @"Assets\testing\";
+        //ScreenCapDirectory = @"Assets\testing\";
         if (!Directory.Exists(ScreenCapDirectory))
         {
             Directory.CreateDirectory(ScreenCapDirectory);
@@ -298,14 +298,12 @@ public class ScreenCaptureManager : MonoBehaviour
         
     void removeText()
     {
-        if (lastPicture.Contains(ScreenCapName))
-        {
-            badpics[ranTextInt].SetActive(false);
-        }
-        else
-        {
-            goodpics[ranTextInt].SetActive(false);
-        }
+        badpics[0].SetActive(false);
+        badpics[1].SetActive(false);
+        badpics[2].SetActive(false);
+        badpics[3].SetActive(false);
+        goodpics[0].SetActive(false);
+        goodpics[1].SetActive(false);
 
     }
     void itsbad()

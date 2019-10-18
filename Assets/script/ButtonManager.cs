@@ -208,7 +208,7 @@ public class ButtonManager : MonoBehaviour
         clickSFX.GetComponent<AudioSource>().Play();
         //opens task list
         tasklistPage.SetActive(true);
-        //FindObjectOfType<TaskListManager>().displayTasks();
+        FindObjectOfType<TaskListManager>().displayTasks();
     }
 
     public void closeTaskList()

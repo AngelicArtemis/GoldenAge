@@ -15795,6 +15795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TaskListManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354735, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
         type: 3}
       propertyPath: m_LocalPosition.x

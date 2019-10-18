@@ -6,17 +6,13 @@ public class photoCollider : MonoBehaviour
 { 
     public bool playerClose = false;
     public bool playerLookingAtCollider = false;
-    /*
-    private int checkPhotoTaken = 0;
-    public static int photoCollected = 0;*/
-    //public GameObject photo;
+
     TaskList tasklist = new TaskList();
     public bool taskPic;
     GameObject player;
     Vector3 facingDir;
     public GameObject directionOfPhoto;
 
-    // Use this for initialization
     void Start()
     {
         init();
@@ -25,21 +21,16 @@ public class photoCollider : MonoBehaviour
     private void init()
     {
         tasklist.taskName = "";
-        //Debug.Log(gameObject.name);
         setTaskName();
         FindObjectOfType<TaskListManager>().taskChecker(tasklist);
         player = FindObjectOfType<CharacterController>().gameObject;
-        //directionOfPhoto = transform.GetChild(0).GetComponent<Collider>().gameObject;
-        //directionOfPhoto = gameObject.GetComponentInChildren<Collider>().gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(playerClose)// && playerClose == true)// && !tasklist.taskCompletion)
+        if(playerClose)
         {
             checkLooking();
-            //FindObjectOfType<TaskListManager>().taskChecker(tasklist);
             if (playerLookingAtCollider)
             {
                 if(!tasklist.taskCompletion)
@@ -112,27 +103,61 @@ public class photoCollider : MonoBehaviour
             playerClose = false;
             //Debug.Log("playerClose = false");
         }
+        closeArrows();
     }
 
     void checkLooking()
     {
         facingDir = player.transform.forward;
         RaycastHit hit;
-        //Debug.DrawRay(player.transform.position, facingDir, Color.green);
-        //Debug.Log("raycast?");
         if (Physics.Raycast(player.transform.position,facingDir , out hit, 100f))
         {
-            Debug.Log(hit.transform.gameObject.name); //returns the name of the object the ray hit
             if (hit.transform.gameObject == directionOfPhoto)
             {
                 Debug.Log("you hit the goal!!!");
+                closeArrows();
                 playerLookingAtCollider = true;
             }
             else
             {
                 playerLookingAtCollider = false;
+                hint();
             }
         }
         
+    }
+
+    public GameObject left;
+    public GameObject right;
+
+    void hint()
+    {
+        Vector3 rightDir = directionOfPhoto.transform.position - player.transform.position;
+
+
+        float angle = Vector3.SignedAngle(rightDir, player.transform.forward, Vector3.up);
+
+        //Debug.Log(angle); //if negative, look right
+        arrows(angle);
+    }
+
+    void arrows(float angle)
+    {
+        if(angle < 0)
+        {
+            right.SetActive(true);
+            left.SetActive(false);
+        }
+        if(angle > 0)
+        {
+            right.SetActive(false);
+            left.SetActive(true);
+        }
+    }
+
+    void closeArrows()
+    {
+        right.SetActive(false);
+        left.SetActive(false);
     }
 }

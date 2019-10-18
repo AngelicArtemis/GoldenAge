@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class LibraryControl : MonoBehaviour
 {
-    string ScreenCapDirectory = @"Assets\testing\";
+    string ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
     string ScreenCapName = "Pictures";
     public GameObject nonTaskLib;
     public GameObject lib;
