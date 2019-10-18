@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07307557, g: 0.041470915, b: 0.19970384, a: 1}
+  m_IndirectSpecularColor: {r: 0.13049199, g: 0.09310198, b: 0.23291773, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16134,6 +16134,7 @@ MonoBehaviour:
   playerClose: 0
   playerLookingAtCollider: 0
   taskPic: 0
+  player: {fileID: 712795641}
   directionOfPhoto: {fileID: 1428165415}
   left: {fileID: 2040552290}
   right: {fileID: 940713710}
@@ -49340,6 +49341,7 @@ MonoBehaviour:
   playerClose: 0
   playerLookingAtCollider: 0
   taskPic: 0
+  player: {fileID: 712795641}
   directionOfPhoto: {fileID: 1109221459}
   left: {fileID: 2040552290}
   right: {fileID: 940713710}
@@ -91631,6 +91633,7 @@ MonoBehaviour:
   playerClose: 0
   playerLookingAtCollider: 0
   taskPic: 0
+  player: {fileID: 712795641}
   directionOfPhoto: {fileID: 270354982}
   left: {fileID: 2040552290}
   right: {fileID: 940713710}
@@ -98875,6 +98878,135 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 36.4, y: 7.68, z: 55.7}
   m_Center: {x: 63.3, y: 0, z: -315.2}
+--- !u!1001 &1460928204
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8117447387687354735, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_Name
+      value: TaskListManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354735, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354735, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 193.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 198.09999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354729, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: tasks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: numberOfTaskInKyoto
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: tasks.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: tasks.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: tasks.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: tasks.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: tasks.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: tasks.Array.data[5]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: complete
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117447387687354728, guid: dbb52926046ac434daae34b88722528b,
+        type: 3}
+      propertyPath: clickSFX
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dbb52926046ac434daae34b88722528b, type: 3}
 --- !u!1 &1461315081
 GameObject:
   m_ObjectHideFlags: 0
@@ -113593,6 +113725,7 @@ MonoBehaviour:
   playerClose: 0
   playerLookingAtCollider: 0
   taskPic: 0
+  player: {fileID: 712795641}
   directionOfPhoto: {fileID: 1824025213}
   left: {fileID: 2040552290}
   right: {fileID: 940713710}

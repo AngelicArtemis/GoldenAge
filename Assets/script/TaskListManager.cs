@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 public class TaskListManager : MonoBehaviour
 {
     public GameObject[] tasks;
-    static int counter = 0;
+    int counter = 0;
     public GameObject complete;
     public List<TaskList> completedTasks = new List<TaskList>(); 
     public int numberOfTaskInKyoto;
     public GameObject clickSFX;
-    public GameObject portal;
+    //public GameObject portal;
 
 
     public void taskChecker(TaskList taskList)
@@ -35,10 +35,6 @@ public class TaskListManager : MonoBehaviour
 
     }
 
-    void openPortal()
-    {
-        portal.SetActive(true);
-    }
 
 
 
@@ -54,15 +50,17 @@ public class TaskListManager : MonoBehaviour
     public void displayTasks()
     {
         Debug.Log("counter" + counter);
-
-        tasks[counter].SetActive(true);
-        if(taskCheckerName(tasks[counter].name))
+        if (tasks[counter])
         {
-            complete.SetActive(true);
-        }
-        else
-        {
-            complete.SetActive(false);
+            tasks[counter].SetActive(true);
+            if (taskCheckerName(tasks[counter].name))
+            {
+                complete.SetActive(true);
+            }
+            else
+            {
+                complete.SetActive(false);
+            }
         }
     }
 

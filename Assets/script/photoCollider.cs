@@ -23,7 +23,8 @@ public class photoCollider : MonoBehaviour
         tasklist.taskName = "";
         setTaskName();
         FindObjectOfType<TaskListManager>().taskChecker(tasklist);
-        player = FindObjectOfType<CharacterController>().gameObject;
+        //player = FindObjectOfType<CharacterController>().gameObject;
+        player = FindObjectOfType<FocusChanging>().gameObject.transform.parent.gameObject;
     }
 
     void Update()
