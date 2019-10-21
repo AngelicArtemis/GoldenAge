@@ -61,11 +61,12 @@ public class DialogueTrigger : MonoBehaviour
         {
             playerClose = true;
         }
+        /*
         if (collider.gameObject.name == "playerTouch")
         {
             playerLookingAtCollider = true;
 
-        }
+        }*/
     }
 
     void OnTriggerExit(Collider collider)
@@ -74,10 +75,11 @@ public class DialogueTrigger : MonoBehaviour
         {
             playerClose = false;
         }
+        /*
         if (collider.gameObject.name == "playerTouch")
         {
             playerLookingAtCollider = false;
-        }
+        }*/
     }
 
 
