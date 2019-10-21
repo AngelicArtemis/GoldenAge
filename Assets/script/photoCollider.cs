@@ -29,7 +29,7 @@ public class photoCollider : MonoBehaviour
         //FindObjectOfType<TaskListManager>().taskChecker(tasklist);
         taskChecker();
         //player = FindObjectOfType<CharacterController>().gameObject;
-        player = FindObjectOfType<FocusChanging>().gameObject.transform.parent.gameObject;
+        player = FindObjectOfType<FocusChanging>().gameObject;
     }
 
     void taskChecker()
@@ -129,7 +129,8 @@ public class photoCollider : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(player.transform.position,facingDir , out hit, 100f))
         {
-            if (hit.transform.gameObject == directionOfPhoto)
+            //Debug.Log(hit.collider.gameObject);
+            if (hit.collider.gameObject == directionOfPhoto)
             {
                 Debug.Log("you hit the goal!!!");
                 closeArrows();
