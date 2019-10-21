@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class photoCollider : MonoBehaviour
 { 
@@ -13,6 +14,9 @@ public class photoCollider : MonoBehaviour
     Vector3 facingDir;
     public GameObject directionOfPhoto;
 
+    string ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
+    string ScreenCapName = "Pictures";
+
     void Start()
     {
         init();
@@ -22,9 +26,21 @@ public class photoCollider : MonoBehaviour
     {
         tasklist.taskName = "";
         setTaskName();
-        FindObjectOfType<TaskListManager>().taskChecker(tasklist);
+        //FindObjectOfType<TaskListManager>().taskChecker(tasklist);
+        taskChecker();
         //player = FindObjectOfType<CharacterController>().gameObject;
         player = FindObjectOfType<FocusChanging>().gameObject.transform.parent.gameObject;
+    }
+
+    void taskChecker()
+    {
+        for (int i = 0; i < Directory.GetFiles(ScreenCapDirectory).Length; i++)
+        {
+            if (Directory.GetFiles(ScreenCapDirectory)[i].Contains(tasklist.taskName) && Directory.GetFiles(ScreenCapDirectory)[i].EndsWith(".png"))
+            {
+                tasklist.taskCompletion = true;
+            }
+        }
     }
 
     void Update()
@@ -39,7 +55,7 @@ public class photoCollider : MonoBehaviour
                     Debug.Log("this is taskpic in collider");
                     FindObjectOfType<ScreenCaptureManager>().taskPic = true;
                     FindObjectOfType<ScreenCaptureManager>().taskPicName = tasklist.taskName;
-                    FindObjectOfType<TaskListManager>().taskChecker(tasklist);
+                    //FindObjectOfType<TaskListManager>().taskChecker(tasklist);
                 }
                 if(tasklist.taskCompletion)
                 {

@@ -9,31 +9,11 @@ public class TaskListManager : MonoBehaviour
     public GameObject[] tasks;
     int counter = 0;
     public GameObject complete;
-    public List<TaskList> completedTasks = new List<TaskList>(); 
+    //public List<TaskList> completedTasks = new List<TaskList>(); 
     public int numberOfTaskInKyoto;
     public GameObject clickSFX;
     //public GameObject portal;
 
-
-    public void taskChecker(TaskList taskList)
-    {
-        if(FindObjectOfType<ScreenCaptureManager>().taskListCheck(taskList.taskName))
-        {
-            taskList.taskCompletion = true;
-            completedTasks.Add(taskList);
-            //FindObjectOfType<LibraryControl>().addCompletedTasks(taskList.taskName);
-            if(completedTasks.Count >= 4)
-            {
-                Debug.Log("hewwo");
-                //openPortal();
-            }
-        }
-        else
-        {
-            taskList.taskCompletion = false;
-        }
-
-    }
 
 
 
