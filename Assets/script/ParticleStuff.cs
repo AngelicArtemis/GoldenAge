@@ -15,12 +15,14 @@ public class ParticleStuff : MonoBehaviour
         stars = GameObject.Find("PhotoHintFX");
     }
 
-    private void Update()
-    {
-        position = fpc.transform.position + (fpc.transform.forward * 3);
-    }
     void OnTriggerEnter(Collider coll)
     {
+        if(fpc == null)
+        {
+            fpc = GameObject.Find("FPSController");
+            stars = GameObject.Find("PhotoHintFX");
+        }
+        position = fpc.transform.position + (fpc.transform.forward * 3);
         if (coll.gameObject.CompareTag("Player"))
         {
             Debug.Log("hewwo?am i in the circle?");
