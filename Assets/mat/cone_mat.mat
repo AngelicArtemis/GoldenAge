@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: cone_mat
-  m_Shader: {fileID: 4800000, guid: cada881adcdd28e4b92e0bd2d726ab19, type: 3}
+  m_Shader: {fileID: 4800000, guid: 14bb003333c250f44a9a09291dd45201, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,13 +20,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _tex:
-        m_Texture: {fileID: 2800000, guid: f750b94cfd28cda4a9dc2bf4a7aa7d7e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 239d72cc9dc963449ba8f3e9d6bcbf80, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
     - _metallic: 0
     - _specular: 0
-    - _stretchV: 0
+    - _stretchV: 1.55
+    - _stretch_U: 1.96
     m_Colors:
-    - _color: {r: 0, g: 1, b: 0.8249753, a: 1}
+    - _color: {r: 0, g: 0.87161016, b: 1, a: 1}

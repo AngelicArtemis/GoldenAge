@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: projection_mat
-  m_Shader: {fileID: 4800000, guid: da630e39537014548bd636299839b12f, type: 3}
+  m_Shader: {fileID: 4800000, guid: 49b5bdb4a83bd4548baf0f9b89a3d97f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -20,11 +20,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _holo_effect_copy:
-        m_Texture: {fileID: 2800000, guid: 200c437096c1b6443b2a44e05dd2650c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 117ebecaa288fbe4781e7c1173caa7f2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _node_4866_copy:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 6dd74c8493977794bb0db00cf7ff42f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -39,5 +39,5 @@ Material:
     - _pixels_copy: 10
     - _specular: 0
     m_Colors:
-    - _glow: {r: 0, g: 1, b: 0.45470548, a: 1}
+    - _glow: {r: 0, g: 0.7595477, b: 1, a: 1}
     - _tex_tint: {r: 0.36405307, g: 0.9528302, b: 0.89292496, a: 1}
