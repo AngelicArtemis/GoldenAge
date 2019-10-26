@@ -14465,13 +14465,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - sentences:
-    - Hi there. Welcome to our travel angency. Are you ready for your time travel?
-    - According to your requriement, we designed your trip that goes through different
-      places at different periods.
-    - The first destination would be Kyoto in 2010s. Always check your tasklist and
-      map when you are lost.
-    - 'The camera function is already activated. You can always wink your right eye
-      (right click) to take photos while in the camera mood (press "F"). '
+    - 'Hi there. Welcome to our travel angency. '
+    - Are you ready for your time travel?
+    - 'According to your requriement, '
+    - We designed your trip that goes through different places at different periods.
+    - 'The first destination would be Kyoto in 2010s. '
+    - Always check your tasklist and map when you are lost.
+    - 'Now the camera function is already activated. '
+    - You can always wink your right eye (right click)
+    - 'to take photos while in the camera mood (press "F"). '
     - Not only for your assignment tho, as long as you are happy with that.
     - If you forget anything, I am always here to help (press ESC).
     - Before you leave, would you like to take a photo of me?
