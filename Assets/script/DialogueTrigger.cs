@@ -34,7 +34,7 @@ public class DialogueTrigger : MonoBehaviour
             }
             else
             {
-                if (playerLookingAtCollider == true && playerClose == true) //show the talking chat bubble vfx here to show you can talk to him
+                if (playerClose == true) //show the talking chat bubble vfx here to show you can talk to him
                 {
                     dialogue = dialogues[Random.Range(0, dialogues.Length)];
                     TriggerDialogue();
