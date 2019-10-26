@@ -11,7 +11,7 @@ public class ParticleStuff : MonoBehaviour
 
     private void Start()
     {
-        //fpc = GameObject.Find("FPSController");
+        fpc = GameObject.Find("FPSController");
         stars = GameObject.Find("PhotoHintFX");
     }
 
@@ -31,7 +31,7 @@ public class ParticleStuff : MonoBehaviour
     {
         GameObject starsEffect = Instantiate(stars, position, Quaternion.identity);
         starsEffect.GetComponentInChildren<ParticleSystem>().Play();
-        //Destroy(starsEffect);
+        Destroy(starsEffect);
     }
 
 }
