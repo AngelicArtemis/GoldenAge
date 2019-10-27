@@ -11,40 +11,46 @@ public class LoadingScreen : MonoBehaviour
 
     IEnumerator loadingNewScene(string scene, string unScene)
     {
-
         AsyncOperation ao = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
 
         while (!ao.isDone)
         {
-            yield return StartCoroutine(loadingThings());
+            //yield return StartCoroutine(loadingThings());
+            yield return null;
             // [0, 0.9] > [0, 1]
             float progress = Mathf.Clamp01(ao.progress / 0.9f);
             Debug.Log("ao.progress" + ao.progress); //this only shows 0 and 0.9??? wtf???hello??? wheres the number in between???
+
+            StartCoroutine(loadingThings(progress));
         }
         SceneManager.UnloadSceneAsync(unScene);
         doneLoading();
     }
 
-    IEnumerator loadingThings()
+    IEnumerator loadingThings(float progress)
     {
-        for (int i = 0; i < 8; i++)
-            {
-                yield return new WaitForSeconds(0.1f);
-                loadingPages[i].SetActive(true);
-                if (i == 0)
-                {
-                    loadingPages[7].SetActive(false);
-                }
-                else
-                {
-                    loadingPages[i - 1].SetActive(false);
-                }
-            }
+        int i = (int)(progress * 100) / 12;
+
+        if (i == 8)
+        {
+            loadingPages[7].SetActive(true);
+        }
+        else
+            loadingPages[i].SetActive(true);
+        if(i == 0)
+        {
+
+        }
+        else
+        {
+            loadingPages[i - 1].SetActive(false);
+        }
         yield return null;
     }
 
     void doneLoading()
     {
+        loadingPages[7].SetActive(false);
         loading.SetActive(false);
     }
 
@@ -58,16 +64,4 @@ public class LoadingScreen : MonoBehaviour
         StartCoroutine(loadingNewScene(scene,unScene));
     }
 
-    void loadPage(int i)
-    {
-        loadingPages[i].SetActive(true);
-        if (i == 0)
-        {
-            loadingPages[7].SetActive(false);
-        }
-        else
-        {
-            loadingPages[i - 1].SetActive(false);
-        }
-    }
 }
