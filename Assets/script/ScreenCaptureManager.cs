@@ -319,4 +319,10 @@ public class ScreenCaptureManager : MonoBehaviour
         ranTextInt = Random.Range(0, badpics.Length);
         badpics[ranTextInt].SetActive(true);
     }
+
+    public void setTask(string taskName)
+    {
+        taskPicName = taskName;
+        taskPic = true;
+    }
 }

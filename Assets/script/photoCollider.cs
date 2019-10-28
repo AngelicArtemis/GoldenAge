@@ -55,8 +55,7 @@ public class photoCollider : MonoBehaviour
                 if(!tasklist.taskCompletion)
                 {
                     Debug.Log("this is taskpic in collider");
-                    FindObjectOfType<ScreenCaptureManager>().taskPic = true;
-                    FindObjectOfType<ScreenCaptureManager>().taskPicName = tasklist.taskName;
+                    FindObjectOfType<ScreenCaptureManager>().setTask(tasklist.taskName);
                     //FindObjectOfType<TaskListManager>().taskChecker(tasklist);
                 }
                 if(tasklist.taskCompletion)
