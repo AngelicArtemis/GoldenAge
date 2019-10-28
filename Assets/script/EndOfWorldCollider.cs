@@ -8,7 +8,7 @@ public class EndOfWorldCollider : MonoBehaviour
 
     void OnTriggerEnter(Collider collide)
     {
-        if (collide.gameObject.name == "playerTouch")
+        if (collide.gameObject.CompareTag("Player"))
         {
             //you reached the end woo now stop
             DoNotGoOut.SetActive(true);
@@ -17,7 +17,7 @@ public class EndOfWorldCollider : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.name == "playerTouch")
+        if(other.gameObject.CompareTag("Player"))
         {
             DoNotGoOut.SetActive(false);
         }
