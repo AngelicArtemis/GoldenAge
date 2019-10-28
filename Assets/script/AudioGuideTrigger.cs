@@ -19,7 +19,7 @@ public class AudioGuideTrigger : MonoBehaviour
         if (collider.gameObject.CompareTag("Player"))
         {
             FindObjectOfType<AudioGuide>().playThis(num);
-            Debug.Log("trigger!");
+            //Debug.Log("trigger!");
             Destroy(gameObject);
         }
     }
