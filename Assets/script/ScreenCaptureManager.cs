@@ -52,8 +52,8 @@ public class ScreenCaptureManager : MonoBehaviour
     {   
         count = 0;
         //ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
-        ScreenCapDirectory = Application.persistentDataPath;
-        ScreenCapDirectory = Path.Combine( ScreenCapDirectory,"\\cameraSS\\");
+        //ScreenCapDirectory = Application.persistentDataPath;
+        ScreenCapDirectory = Path.Combine(Application.persistentDataPath,"cameraSS/");
         //ScreenCapDirectory = @"Assets\testing\";
         if (!Directory.Exists(ScreenCapDirectory))
         {
@@ -112,6 +112,8 @@ public class ScreenCaptureManager : MonoBehaviour
         turniton();
         timePassed = 0f;
         //cameraEffect.SetActive(true);
+        Debug.Log(Application.persistentDataPath);
+        Debug.Log(ScreenCapDirectory);
         FindObjectOfType<ObjectManager>().setCameraMode(true);
     }
 

@@ -30,8 +30,7 @@ public class LibraryControl : MonoBehaviour
     private void Start()
     {
 
-        ScreenCapDirectory = Application.persistentDataPath;
-        ScreenCapDirectory = Path.Combine(ScreenCapDirectory, "\\cameraSS\\");
+        ScreenCapDirectory = Path.Combine(Application.persistentDataPath, "cameraSS/");
     }
     public struct Picture
     {

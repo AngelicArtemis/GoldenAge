@@ -20,8 +20,7 @@ public class photoCollider : MonoBehaviour
 
     void Start()
     {
-        ScreenCapDirectory = Application.persistentDataPath;
-        ScreenCapDirectory = Path.Combine(ScreenCapDirectory,"\\cameraSS\\");
+        ScreenCapDirectory = Path.Combine(Application.persistentDataPath, "cameraSS/");
         init();
     }
 
