@@ -21,7 +21,8 @@ public class LoadingScreen : MonoBehaviour
             float progress = Mathf.Clamp01(ao.progress / 0.9f);
             Debug.Log("ao.progress" + ao.progress); //this only shows 0 and 0.9??? wtf???hello??? wheres the number in between???
 
-            StartCoroutine(loadingThings(progress));
+            //StartCoroutine(loadingThings(progress));
+            showLoading(progress);
         }
         SceneManager.UnloadSceneAsync(unScene);
         doneLoading();
@@ -37,7 +38,7 @@ public class LoadingScreen : MonoBehaviour
         }
         else
             loadingPages[i].SetActive(true);
-        if(i == 0)
+        if (i == 0)
         {
 
         }
@@ -46,6 +47,49 @@ public class LoadingScreen : MonoBehaviour
             loadingPages[i - 1].SetActive(false);
         }
         yield return null;
+    }
+
+    void showLoading(float progress)
+    {
+        int i = (int)(progress * 100) / 12;
+
+        switch(i)
+        {
+            case 0:
+                loadingPages[0].SetActive(true);
+                break;
+            case 1:
+                loadingPages[1].SetActive(true);
+                loadingPages[i - 1].SetActive(false);
+                break;
+            case 2:
+                loadingPages[2].SetActive(true);
+                loadingPages[i - 1].SetActive(false);
+                break;
+            case 3:
+                loadingPages[3].SetActive(true);
+                loadingPages[i - 1].SetActive(false);
+                break;
+            case 4:
+                loadingPages[4].SetActive(true);
+                loadingPages[i - 1].SetActive(false);
+                break;
+            case 5:
+                loadingPages[5].SetActive(true);
+                loadingPages[i - 1].SetActive(false);
+                break;
+            case 6:
+                loadingPages[6].SetActive(true);
+                loadingPages[i - 1].SetActive(false);
+                break;
+            case 7:
+                loadingPages[7].SetActive(true);
+                loadingPages[i - 1].SetActive(false);
+                break;
+            default:
+                break;
+        }
+
     }
 
     void doneLoading()
