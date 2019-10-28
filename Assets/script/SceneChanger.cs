@@ -37,7 +37,7 @@ public class SceneChanger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collide)
     {
-        if (collide.gameObject.name == "playerTouch")
+        if (collide.gameObject.CompareTag("Player"))
         {
             getSceneName();
             if (sceneName == "Lvl1")
