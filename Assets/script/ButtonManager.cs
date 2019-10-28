@@ -136,7 +136,8 @@ public class ButtonManager : MonoBehaviour
             SceneChanger sceneChanger = canvas.GetComponent<SceneChanger>();
             sceneChanger.gamestart = false;
         }
-        
+
+        inMenu = false;
         mainMenu.SetActive(true);
         inGameMenu.SetActive(false);
         inGameIcon.SetActive(false);
