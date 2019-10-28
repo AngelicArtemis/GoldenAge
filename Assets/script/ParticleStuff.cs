@@ -33,7 +33,7 @@ public class ParticleStuff : MonoBehaviour
     {
         GameObject starsEffect = Instantiate(stars, position, Quaternion.identity);
         starsEffect.GetComponentInChildren<ParticleSystem>().Play();
-        Destroy(starsEffect);
+        //Destroy(starsEffect);
     }
 
 }
