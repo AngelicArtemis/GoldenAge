@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class ScreenCaptureManager : MonoBehaviour
 {
@@ -141,10 +140,6 @@ public class ScreenCaptureManager : MonoBehaviour
         if (picTime >= pictureTimer)
         {
             turnitoff();
-            if(SceneManager.GetSceneAt(1).name == "Lvl1")
-            {
-                FindObjectOfType<hideArrows>().hide();
-            }
             cameraEffect.SetActive(false);
             takePicture();
             StartCoroutine(inGameIconBack());
