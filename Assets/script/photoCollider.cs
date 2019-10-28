@@ -108,10 +108,10 @@ public class photoCollider : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            init();
             playerClose = true;
             //Debug.Log("playerClose = true");
         }
-        init();
     }
 
     void OnTriggerExit(Collider collider)
