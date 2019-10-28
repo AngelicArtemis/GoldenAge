@@ -213,23 +213,23 @@ public class ScreenCaptureManager : MonoBehaviour
             {
                 toriTask.SetActive(true);
             }
-            if(placeName == "market")
+            else if(placeName == "market")
             {
                 marketTask.SetActive(true);
             }
-            if (placeName == "news")
+            else if (placeName == "station")
             {
                 newsTask.SetActive(true);
             }
-            if (placeName == "tower")
+            else if (placeName == "tower")
             {
                 towerTask.SetActive(true);
             }
-            if (placeName == "cinema")
+            else if (placeName == "cinema")
             {
                 cinemaTask.SetActive(true);
             }
-            if (placeName == "kinkakuji")
+            else if (placeName == "kinkakuji")
             {
                 kinkakujiTask.SetActive(true);
             }
