@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class LibraryControl : MonoBehaviour
 {
-    string ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
+    string ScreenCapDirectory;// = "C:\\GoldenAge\\cameraSS\\";
     string ScreenCapName = "Pictures";
     public GameObject nonTaskLib;
     public GameObject lib;
@@ -27,7 +27,12 @@ public class LibraryControl : MonoBehaviour
     public GameObject kinkakujiLib;
     public GameObject stationLib;
 
+    private void Start()
+    {
 
+        ScreenCapDirectory = Application.persistentDataPath;
+        ScreenCapDirectory = Path.Combine(ScreenCapDirectory, "\\cameraSS\\");
+    }
     public struct Picture
     {
         public Texture2D pics;

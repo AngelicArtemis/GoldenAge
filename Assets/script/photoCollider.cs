@@ -14,11 +14,14 @@ public class photoCollider : MonoBehaviour
     Vector3 facingDir;
     public GameObject directionOfPhoto;
 
-    string ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
+    string ScreenCapDirectory;// = "C:\\GoldenAge\\cameraSS\\";
+
     string ScreenCapName = "Pictures";
 
     void Start()
     {
+        ScreenCapDirectory = Application.persistentDataPath;
+        ScreenCapDirectory = Path.Combine(ScreenCapDirectory,"\\cameraSS\\");
         init();
     }
 

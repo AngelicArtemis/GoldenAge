@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScreenCaptureManager : MonoBehaviour
 {
@@ -50,9 +51,9 @@ public class ScreenCaptureManager : MonoBehaviour
     void Start()
     {   
         count = 0;
-        ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
-        //ScreenCapDirectory = Application.persistentDataPath;
-        //ScreenCapDirectory = Path.Combine( ScreenCapDirectory,"cameraSS\\");
+        //ScreenCapDirectory = "C:\\GoldenAge\\cameraSS\\";
+        ScreenCapDirectory = Application.persistentDataPath;
+        ScreenCapDirectory = Path.Combine( ScreenCapDirectory,"\\cameraSS\\");
         //ScreenCapDirectory = @"Assets\testing\";
         if (!Directory.Exists(ScreenCapDirectory))
         {
@@ -141,6 +142,10 @@ public class ScreenCaptureManager : MonoBehaviour
         {
             turnitoff();
             cameraEffect.SetActive(false);
+            if (SceneManager.GetSceneAt(1).name == "Lvl1")
+            {
+                FindObjectOfType<hideArrow>().hide();
+            }
             takePicture();
             StartCoroutine(inGameIconBack());
             StartCoroutine(displayTimer());
