@@ -18,7 +18,7 @@ public class photoTimer : MonoBehaviour
 
     public IEnumerator photoTimerFunc() {
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         gameObject.SetActive(false);
     }
 }
