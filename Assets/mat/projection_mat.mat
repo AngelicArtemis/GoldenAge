@@ -34,7 +34,7 @@ Material:
     - _exp_fresnel: 3
     - _glitch_speed: 0.08
     - _glow_intensity: 3
-    - _holo_strength: 0.19
+    - _holo_strength: 0.44
     - _metallic: 0
     - _pixels_copy: 10
     - _specular: 0
