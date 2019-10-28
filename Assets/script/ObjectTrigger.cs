@@ -34,7 +34,7 @@ public class ObjectTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "playerTouch")
+        if (other.gameObject.CompareTag("Player")) 
         {
             nearObject = true;
         }
@@ -42,7 +42,7 @@ public class ObjectTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "playerTouch")
+        if (other.gameObject.CompareTag("Player"))
         { 
             nearObject = false;
         }
