@@ -43,6 +43,6 @@ Material:
     - _Cutoff: 0.5
     - _edgeFalloff: 0.5
     - _opacity: 0.2
-    - _timeMultiply: 0.2
+    - _timeMultiply: 0.25
     m_Colors:
     - _Color: {r: 0.9339623, g: 0.9339623, b: 0.59474015, a: 1}
