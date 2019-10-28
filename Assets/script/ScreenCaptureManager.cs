@@ -174,7 +174,7 @@ public class ScreenCaptureManager : MonoBehaviour
 
     public IEnumerator displayTimer()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         removeText();
         toriTask.SetActive(false);
         marketTask.SetActive(false);
