@@ -240,7 +240,7 @@ public class ScreenCaptureManager : MonoBehaviour
             cameraMode = false;
             picTime = 0f;
             FindObjectOfType<ObjectManager>().setCameraMode(false);
-
+            taskPic = false;
         }
         
     }
