@@ -30,7 +30,7 @@ public class LoadingScreen : MonoBehaviour
 
     IEnumerator loadingThings(float progress)
     {
-        int i = (int)(progress * 100) / 12;
+        int i = (int)((progress * 100) / 12.5);
 
         if (i == 8)
         {
