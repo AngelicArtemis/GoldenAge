@@ -62,7 +62,8 @@ public class photoCollider : MonoBehaviour
                 {
 
                     Debug.Log("this is false1");
-                    FindObjectOfType<ScreenCaptureManager>().taskPic = false;
+                    FindObjectOfType<ScreenCaptureManager>().unsetTask();
+                    //FindObjectOfType<ScreenCaptureManager>().taskPic = false;
                 }
                 
             }

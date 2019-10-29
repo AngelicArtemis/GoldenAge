@@ -325,4 +325,9 @@ public class ScreenCaptureManager : MonoBehaviour
         taskPicName = taskName;
         taskPic = true;
     }
+
+    public void unsetTask()
+    {
+        taskPic = false;
+    }
 }
