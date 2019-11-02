@@ -1,4 +1,3 @@
-# GoldenAge
 
 A vertical slice of a exploration game, where the player travel back in time to take pictures to complete the task list. 
 
