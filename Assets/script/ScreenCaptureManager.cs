@@ -23,7 +23,7 @@ public class ScreenCaptureManager : MonoBehaviour
     public GameObject towerTask;
     public GameObject cinemaTask;
     public GameObject kinkakujiTask;
-    float pictureTimer = 2.01f;
+    float pictureTimer = 3.5f;
     float picTime = 0f;
 
 
