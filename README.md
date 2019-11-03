@@ -15,4 +15,5 @@ Free Assets:
 - Simple Modular Street Kit - Jacek Jankowski
 - Projection Shader - Wei Yeh
 
-*Full credits found in game
+\*Full credits found in game
+\*Executable file does not run correctly on certain pcs
