@@ -60,14 +60,13 @@ public class photoCollider : MonoBehaviour
                 }
                 if(tasklist.taskCompletion)
                 {
-
                     Debug.Log("this is false1");
                     FindObjectOfType<ScreenCaptureManager>().unsetTask();
                     //FindObjectOfType<ScreenCaptureManager>().taskPic = false;
                 }
                 
             }
-
+            FindObjectOfType<ScreenCaptureManager>().unsetTask(); //unset prev task
         }
 
 
