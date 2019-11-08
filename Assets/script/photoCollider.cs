@@ -66,7 +66,6 @@ public class photoCollider : MonoBehaviour
                 }
                 
             }
-            FindObjectOfType<ScreenCaptureManager>().unsetTask(); //unset prev task
         }
 
 
@@ -122,6 +121,7 @@ public class photoCollider : MonoBehaviour
             //Debug.Log("playerClose = false");
         }
         closeArrows();
+        FindObjectOfType<ScreenCaptureManager>().unsetTask(); 
     }
 
     void checkLooking()
