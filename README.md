@@ -1,6 +1,12 @@
 
 A vertical slice of a exploration game, where the player travel back in time to take pictures to complete the task list. 
 
+Control:
+- WASD movement keys
+- F to open camera
+- Right click while in camera to take picture
+- ESC to open in game menu
+
 Credits*:
 - Kristine 
 - RuoXuan
