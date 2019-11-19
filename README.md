@@ -1,5 +1,5 @@
 
-A vertical slice of a exploration game, where the player travel back in time to take pictures to complete the task list. 
+An exploration game, where the player travel back in time to Kyoto to take pictures completing the task list. 
 
 Control:
 - WASD movement keys
