@@ -1,11 +1,12 @@
 
-An exploration game, where the player travel back in time to Kyoto to take pictures completing the task list. 
+An exploration game, where the player travels back in time to Kyoto to take pictures completing the task list. 
+Player may also learn various triva about the places and things of Kyoto.
 
 Control:
-- WASD movement keys
+- Use WASD keys to move
 - F to open camera
-- Right click while in camera to take picture
-- ESC to open in game menu
+- Right click while in camera mode to take a picture
+- ESC to open the in-game menu
 
 Credits*:
 - Kristine 
@@ -21,3 +22,4 @@ Free Assets:
 
 \*Full credits found in game
 
+[<- Back](../)
